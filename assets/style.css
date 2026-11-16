@@ -1,0 +1,147 @@
+/* ============================================================
+   Etz Chaim — The Right Way · therightway.life
+   Design system per Cameron's blueprint (2026-11-16):
+   gold #D4AF37 · silver #C0C0C0 · deep blue #003366 · green #008000
+   Elegant, spiritual, technologically sophisticated. No frameworks.
+   ============================================================ */
+:root{
+  --gold:#D4AF37; --gold-bright:#f0d060; --silver:#C0C0C0;
+  --blue:#003366; --blue-deep:#04182e; --green:#008000; --green-soft:#2ea36b;
+  --ink:#eef1f6; --ink-dim:#b9c2cf; --panel:rgba(10,32,58,.72);
+  --line:rgba(212,175,55,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background:#050f1e;
+  background-image:
+    radial-gradient(1100px 500px at 85% -5%, rgba(0,51,102,.85), transparent 60%),
+    radial-gradient(900px 480px at -10% 30%, rgba(0,128,0,.20), transparent 55%),
+    radial-gradient(1200px 700px at 50% 115%, rgba(212,175,55,.10), transparent 60%),
+    linear-gradient(180deg,#071527 0%, #050f1e 40%, #040b16 100%);
+  background-attachment:fixed;
+  font-family:Inter, system-ui, sans-serif; line-height:1.65;
+}
+h1,h2,h3{font-family:"Cormorant Garamond", Georgia, serif; font-weight:600; line-height:1.15; margin:.2em 0 .45em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem)}
+h3{font-size:1.35rem}
+p{margin:.5em 0 1em}
+a{color:var(--gold-bright)}
+a:hover{color:#fff}
+.wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+section.block{padding:56px 0 8px}
+.lede{font-size:1.18rem; color:var(--ink-dim); max-width:46em}
+.kicker{letter-spacing:.28em; text-transform:uppercase; font-size:.78rem; color:var(--gold); font-weight:700}
+.hebrew{font-family:"Cormorant Garamond", serif; color:var(--silver)}
+
+/* holographic shimmer for display headings */
+.shimmer{
+  background:linear-gradient(100deg,var(--gold) 20%,#fff6d8 40%,var(--silver) 55%,var(--gold) 75%);
+  background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:shimmer 9s linear infinite;
+}
+@keyframes shimmer{to{background-position:220% 0}}
+
+/* ---------- nav ---------- */
+.site-nav{
+  position:sticky; top:0; z-index:50; display:flex; align-items:center; gap:18px;
+  padding:10px 22px; background:rgba(4,15,30,.88); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink)}
+.brand-mark{font-size:1.7rem; color:var(--gold); text-shadow:0 0 18px rgba(212,175,55,.7)}
+.brand-text{font-family:Cinzel, serif; font-weight:700; font-size:1.15rem; letter-spacing:.04em; line-height:1.1}
+.brand-text small{display:block; font-family:Inter,sans-serif; font-weight:400; font-size:.68rem; letter-spacing:.14em; color:var(--ink-dim); text-transform:uppercase}
+.nav-links{margin-left:auto; display:flex; align-items:center; gap:4px; flex-wrap:wrap}
+.nav-links a{color:var(--ink); text-decoration:none; padding:8px 11px; border-radius:8px; font-size:.95rem}
+.nav-links a:hover{background:rgba(212,175,55,.14); color:#fff}
+.nav-links a.active{color:var(--gold-bright)}
+.nav-toggle{display:none; margin-left:auto; background:none; border:1px solid var(--line); color:var(--gold); font-size:1.2rem; border-radius:8px; padding:4px 12px}
+a.donate-btn{
+  display:inline-block; background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,#9c7c1e);
+  color:#231a02 !important; font-weight:700; text-decoration:none; padding:10px 22px; border-radius:999px;
+  box-shadow:0 4px 22px rgba(212,175,55,.35); border:1px solid #ffe9a3;
+}
+a.donate-btn:hover{filter:brightness(1.1); color:#000 !important}
+a.donate-btn.big{font-size:1.1rem; padding:14px 34px}
+.nav-donate{margin-left:10px}
+@media (max-width:900px){
+  .nav-toggle{display:block}
+  .nav-links{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch;
+    background:rgba(4,15,30,.98); padding:12px 18px 18px; border-bottom:1px solid var(--line)}
+  body.nav-open .nav-links{display:flex}
+  .nav-donate{margin:8px 0 0; text-align:center}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative; overflow:hidden; text-align:center; padding:110px 20px 84px; --par:0px}
+.hero .geo{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;
+  transform:translateY(var(--par)); opacity:.5}
+.hero .geo svg{width:min(880px,140vw); height:auto; animation:spin 140s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-inner{position:relative; max-width:860px; margin:0 auto}
+.hero .hebrew-big{font-size:clamp(2rem,5vw,3.2rem); color:var(--silver); opacity:.9; letter-spacing:.06em}
+.float-letters span{position:absolute; font-family:"Cormorant Garamond",serif; color:rgba(192,192,192,.20);
+  font-size:2.4rem; animation:floaty 11s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+.hero .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:26px}
+.btn-ghost{display:inline-block; padding:12px 26px; border-radius:999px; border:1px solid var(--silver);
+  color:var(--ink); text-decoration:none; font-weight:600}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold-bright)}
+.stat-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:44px}
+.stat{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 22px; min-width:150px}
+.stat b{display:block; font-family:Cinzel,serif; font-size:1.5rem; color:var(--gold)}
+.stat span{font-size:.82rem; color:var(--ink-dim); letter-spacing:.08em; text-transform:uppercase}
+
+/* ---------- cards & bands ---------- */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin:22px 0 10px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:24px;
+  transition:transform .35s ease, box-shadow .35s ease}
+.card:hover{transform:translateY(-5px); box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.card h3{color:var(--gold-bright); margin-top:0}
+.card .glyph{font-size:1.8rem; color:var(--gold)}
+.donate-band{margin:64px 0 0; padding:54px 20px; text-align:center;
+  background:linear-gradient(120deg, rgba(212,175,55,.20), rgba(0,51,102,.55) 55%, rgba(0,128,0,.22));
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.band-inner{max-width:760px; margin:0 auto}
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1; transform:none}
+.note-box{border-left:4px solid var(--green-soft); background:rgba(0,128,0,.10); padding:16px 20px; border-radius:0 12px 12px 0; margin:20px 0}
+.advisory{border:1px solid var(--gold); background:rgba(212,175,55,.08); border-radius:14px; padding:20px 24px; margin:24px 0}
+table.tiers{width:100%; border-collapse:collapse; margin:18px 0}
+table.tiers th, table.tiers td{border:1px solid var(--line); padding:12px 14px; text-align:left}
+table.tiers th{background:rgba(0,51,102,.6); color:var(--gold-bright); font-family:Cinzel,serif; letter-spacing:.05em}
+
+/* ---------- journey ---------- */
+.book{border:1px solid var(--line); border-radius:14px; margin:12px 0; background:var(--panel); overflow:hidden}
+.book summary{cursor:pointer; padding:16px 20px; font-family:"Cormorant Garamond",serif; font-size:1.3rem; color:var(--gold-bright); list-style:none}
+.book summary::-webkit-details-marker{display:none}
+.book summary small{color:var(--ink-dim); font-family:Inter,sans-serif; font-size:.85rem; margin-left:10px}
+.chapters{display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:10px; padding:6px 18px 18px}
+.ep{border:1px solid rgba(192,192,192,.22); border-radius:10px; padding:10px 12px; font-size:.9rem}
+.ep b{color:var(--ink)} .ep span{display:block; color:var(--ink-dim); font-size:.8rem}
+.ep .soon{color:var(--green-soft); font-weight:600; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase}
+
+/* ---------- blog ---------- */
+.post-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; margin:24px 0}
+.post-card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px}
+.post-card h3 a{color:var(--gold-bright); text-decoration:none}
+.post-meta{color:var(--ink-dim); font-size:.85rem; letter-spacing:.06em; text-transform:uppercase}
+article.post{max-width:760px; margin:0 auto; padding:44px 20px 10px; font-size:1.08rem}
+article.post h1{font-size:clamp(2rem,4.5vw,3rem)}
+
+/* ---------- footer ---------- */
+.site-footer{margin-top:70px; border-top:1px solid var(--line); background:rgba(3,10,20,.9); padding:44px 22px 26px}
+.foot-grid{max-width:1120px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:26px}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-brand{font-family:Cinzel,serif; color:var(--gold); font-size:1.1rem}
+.foot-head{font-family:Cinzel,serif; color:var(--silver); letter-spacing:.06em}
+.site-footer a{display:block; color:var(--ink-dim); text-decoration:none; padding:3px 0}
+.site-footer a:hover{color:var(--gold-bright)}
+.site-footer a.donate-btn{display:inline-block; margin-top:6px}
+.foot-fine{max-width:1120px; margin:26px auto 0; color:#7f8b9c; font-size:.85rem; border-top:1px solid rgba(192,192,192,.15); padding-top:16px}
+@media (prefers-reduced-motion: reduce){
+  .hero .geo svg, .shimmer, .float-letters span{animation:none}
+  html{scroll-behavior:auto}
+}
