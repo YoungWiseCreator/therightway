@@ -13,9 +13,10 @@
 const DONATE_LINK = "";
 
 // INTAKE_ENDPOINT: the single free-intake endpoint for the site's
-// done-for-you tools (tools/). Same pattern as DONATE_LINK above:
-// EMPTY at launch — while empty, each tool builds its result right on
-// the page in the visitor's browser and details stay on their device.
-// When the fleet intake endpoint opens, paste its URL here — one edit
-// wires every tool's form to it.
-const INTAKE_ENDPOINT = "";
+// done-for-you tools (tools/). Same pattern as DONATE_LINK above.
+// WIRED 2026-11-16: the fleet bookings spine (POST /api/lead, the
+// same intake the other fleet sites post to; therightway.life is
+// registered there as an email-first site). Each tool still builds
+// its full result right on the page; the name + email + tool inputs
+// also go to the fleet so we can follow up — done for you, free.
+const INTAKE_ENDPOINT = "https://bookings.chasethealgo.com/api/lead";

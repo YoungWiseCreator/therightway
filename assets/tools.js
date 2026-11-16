@@ -47,7 +47,28 @@
       localStorage.setItem(key, JSON.stringify(arr));
     } catch (e) {}
     if (typeof INTAKE_ENDPOINT !== "undefined" && INTAKE_ENDPOINT) {
-      try { fetch(INTAKE_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tool: tool, data: data }) }); } catch (e) {}
+      // Fleet bookings spine (POST /api/lead — the same intake the other
+      // fleet sites post to): site + name + email at the top level, the
+      // tool's own inputs carried in notes. Email-first site: no phone.
+      var notes = "Free tool: " + tool;
+      try {
+        var rest = {};
+        for (var k in data) { if (k !== "name" && k !== "email") rest[k] = data[k]; }
+        notes += " — inputs: " + JSON.stringify(rest);
+      } catch (e) {}
+      try {
+        fetch(INTAKE_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            site: "therightway.life",
+            name: data.name || "",
+            email: data.email || "",
+            division: "therightway",
+            notes: notes
+          })
+        });
+      } catch (e) {}
     }
   }
   function formData(form) {
