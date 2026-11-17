@@ -232,3 +232,34 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   body{background:#fff; color:#000}
   .tool-result{background:#fff; color:#000}
 }
+
+/* ---------- language toggle + contact (BST chrome treatment, Bible skin) ---------- */
+.site-nav{flex-wrap:wrap}
+.lang-switch{display:inline-flex; flex-wrap:wrap; gap:.3rem; align-items:center}
+.lang-btn{
+  background:transparent; color:var(--ink-dim); border:1px solid var(--control-line);
+  border-radius:999px; padding:.28rem .7rem; font-weight:700; font-size:.85rem;
+  cursor:pointer; font-family:inherit;
+}
+.lang-btn:hover{color:var(--gold-bright); border-color:var(--gold)}
+.lang-btn.active{background:var(--gold); color:#231a02; border-color:var(--gold)}
+.lang-switch.translating{opacity:.55}
+.contact-btn{
+  display:inline-block; background:var(--gold); color:#231a02; font-weight:700;
+  text-decoration:none; padding:.45rem 1.05rem; border:1px solid var(--gold);
+  border-radius:6px; font-size:.92rem; white-space:nowrap;
+}
+.contact-btn:hover{background:var(--gold-bright); color:#231a02}
+@media (max-width:640px){
+  /* language bar: full-width even grid — every language the same size,
+     no squished content-width pills (Cameron 2026-11-17, as on BST) */
+  .site-nav .lang-switch{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:.45rem;
+    flex:1 1 100%; margin-top:.15rem;
+  }
+  .site-nav .lang-btn{
+    padding:.6rem .15rem; font-size:.84rem; text-align:center;
+    white-space:nowrap; min-height:44px;
+  }
+  .site-nav .contact-btn{flex:1 1 100%; text-align:center; padding:.6rem 1.05rem}
+}
