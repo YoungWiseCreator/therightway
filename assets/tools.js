@@ -1,4 +1,3 @@
-
 // Etz Chaim / The Right Way — free tools engine (therightway.life)
 // All results are built in the visitor's browser. If INTAKE_ENDPOINT is
 // set in assets/config.js, the request is also sent there for follow-up.

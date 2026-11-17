@@ -8,6 +8,35 @@
       a.setAttribute("rel", "noopener");
     });
   }
+
+  // Mobile dropdown navigation
+  var navItems = document.querySelectorAll(".nav-item");
+  navItems.forEach(function (item) {
+    var link = item.querySelector(".nav-link");
+    var dropdown = item.querySelector(".nav-dropdown");
+    if (dropdown && link) {
+      // Mobile: toggle on click
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 900) {
+          var isOnlyTrigger = !link.href || link.getAttribute("href") === "#";
+          if (isOnlyTrigger || dropdown.querySelector("a")) {
+            e.preventDefault();
+            item.classList.toggle("open");
+          }
+        }
+      });
+    }
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-item")) {
+      document.querySelectorAll(".nav-item.open").forEach(function (item) {
+        item.classList.remove("open");
+      });
+    }
+  });
+
   // Reveal-on-scroll for band/card sections.
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -19,6 +48,7 @@
   } else {
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
   }
+
   // Gentle hero parallax (transform only, disabled for reduced motion).
   var hero = document.querySelector(".hero");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
