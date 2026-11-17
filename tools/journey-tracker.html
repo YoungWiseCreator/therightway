@@ -5,86 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1,189-Chapter Journey Tracker — Your Personal Map of the Whole Bible — Etz Chaim, the Tree of Life · The Right Way</title>
 <meta name="description" content="Tell us where you stopped and get your personal Journey map: chapters done, your current position on the 1,189-chapter road, and your next three episodes.">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <script src="../assets/config.js"></script>
-</head>
+<link rel="stylesheet" href="../assets/lang-toggle.css"></head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-nav">
   <div class="brand-lockups">
     <a class="brand" href="../index.html">
       <span class="brand-mark" aria-hidden="true">&#x2721;</span>
       <span class="brand-text">Etz Chaim<small>The Tree of Life</small></span>
     </a>
-    <span class="brand-plate" role="note" aria-label="The Right Way — therightway.life">
+    <span class="brand-plate" role="note" aria-label="The Right Way · therightway.life">
       <span class="brand-plate-name">The Right Way</span>
+      <span class="brand-plate-separator" aria-hidden="true">·</span>
       <span class="brand-plate-url">therightway.life</span>
     </span>
   </div>
-  <button class="nav-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">&#9776;</button>
-    <nav class="nav-links">
-    <div class="nav-item"><a class="nav-link" href="../journey.html">The Journey</a></div>
-    <div class="nav-item"><a class="nav-link" href="../watch.html">Watch</a></div>
-    <div class="nav-item"><a class="nav-link" href="../study.html">Study</a></div>
-    <div class="nav-item"><a class="nav-link" href="../blog/index.html">Blog</a></div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Community</a>
-      <div class="nav-dropdown">
-        <a href="../community.html">Chavurot & Outreach</a>
-        <a href="../youth.html">Youth</a>
-      </div>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+    <span aria-hidden="true">&#9776;</span><span class="nav-toggle-text">Menu</span>
+  </button>
+  <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+    <div class="nav-primary-links"><a href="../journey.html" class="active" aria-current="page" data-i18n="The Journey">The Journey</a><a href="../watch.html" data-i18n="Watch">Watch</a><a href="../study.html" data-i18n="Study">Study</a><a href="../community.html" data-i18n="Community">Community</a><a href="../get-help.html" data-i18n="Get Help">Get Help</a></div>
+    <div class="nav-more">
+      <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="more-navigation" aria-haspopup="true">More pages <span aria-hidden="true">&#9662;</span></button>
+      <div class="nav-more-menu" id="more-navigation"><a href="../resources.html">Resource Center</a><a href="../youth.html">Youth</a><a href="../blog/index.html">Blog</a><a href="../about.html" data-i18n="About & Sources">About & Sources</a></div>
     </div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Help</a>
-      <div class="nav-dropdown">
-        <a href="../get-help.html">Get Help</a>
-        <a href="../resources.html">Resource Center</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a class="nav-link" href="../about.html">About & Sources</a>
-    </div>
-    <a class="donate-btn nav-donate" href="../donate.html">Donate</a>
-  </nav>
+    <a class="donate-btn nav-donate" href="../donate.html" data-i18n="Donate">Donate</a>
+  <span class="lang-switch" role="group" aria-label="Choose language"><button type="button" class="lang-btn active" data-lang="en">English</button><button type="button" class="lang-btn" data-lang="es">Español</button><button type="button" class="lang-btn" data-lang="ht">Kreyòl Ayisyen</button><button type="button" class="lang-btn" data-lang="pt">Português</button><button type="button" class="lang-btn" data-lang="fr">Français</button><button type="button" class="lang-btn" data-lang="zh">中文</button><button type="button" class="lang-btn" data-lang="he">עברית</button></span></nav>
 </header>
+<main id="main-content">
 
-<section class="block"><div class="wrap">
-  <p class="kicker">The Journey &middot; Free Tool 1.3</p>
-  <h1 class="shimmer">1,189-Chapter Journey Tracker</h1>
-  <p class="lede">A 1,189-chapter road needs a way to mark where you stand. Tell us where you stopped and we build your personal Journey map: how many chapters are behind you, exactly where you are, and the next three episodes ahead of you — wired to the same 1,189 slots as the <a href="../journey.html">Journey map</a>.</p>
-  <p class="tool-free">Done for you for free — no charge, no credit card, ever. This is therightway.life: everything here is free, and donations are the only money-in this site ever asks for.</p>
+<section class="block tool-page"><div class="wrap tool-wrap">
+  <h1>1,189-Chapter Journey Tracker</h1>
+  <p class="lede">Tell us where you stopped. We build your personal map: chapters complete, where you stand, and your next three episodes.</p>
+  <p class="tool-free">Free from start to finish—no charge or credit card. Your result appears here.</p>
   
 <form class="tool-form" data-tool="tracker">
-  <label class="tool-field"><span>Your name</span><input required name="name" autocomplete="name" placeholder="First name is fine"></label><label class="tool-field"><span>Your email</span><input required type="email" name="email" autocomplete="email" placeholder="you@example.com"></label><label class="tool-field"><span>The last book you finished (or are in)</span><select name="book" id="jt-book" required></select></label><label class="tool-field"><span>The last chapter you finished there</span><select name="chapter" id="jt-chapter" required></select></label>
+  <label class="tool-field"><span>The last book you finished (or are in)</span><select name="book" id="jt-book" required></select></label><label class="tool-field"><span>The last chapter you finished there</span><select name="chapter" id="jt-chapter" required></select></label><label class="tool-field"><span>Your name</span><input required name="name" autocomplete="name" placeholder="First name is fine"></label><label class="tool-field"><span>Your email</span><input required type="email" name="email" autocomplete="email" placeholder="you@example.com"></label>
   <button class="tool-submit" type="submit">Build my Journey map — free</button>
 </form>
-  <p class="tool-note">Your result is built right here on this page the moment you submit — print it or save it. Your name and email go to us with your request so we can follow up and do this for you; they are used only for this request and are never sold or shared.</p>
   <div id="tool-result" class="tool-result" hidden></div>
+  <details class="privacy-note"><summary>How your details are used</summary>
+             <p>Your result is built right here as soon as you submit. Your name and email also
+             reach us with your request so we can follow up and do this for you; they are used
+             only for this request and are never sold or shared.</p></details>
   
   <div class="note-box">Your map is saved in your own browser on this device, so when you come back
-  your place on the road is still marked. Walk with the channel at three episodes a day, or at your
-  own pace — the map counts chapters finished, never days missed. Nobody is behind on this road;
+  your place on the road is still marked. Walk with the channel or at your own pace — the map counts
+  chapters finished, never days missed. Nobody is behind on this road;
   there is only where you stopped, and the next chapter.</div>
   <p style="margin-top:26px"><a href="../journey.html">&larr; Back to the Journey map</a></p>
 </div></section>
 
 <section class="donate-band reveal">
   <div class="band-inner">
-    <h2>These tools stay free because people give</h2>
-    <p>Every tool, guide, and episode on therightway.life is free — no charges, no paywalls, ever. Donations are how the site is carried.</p>
-    <a class="donate-btn big" href="../donate.html">Donate</a>
+    <h2>Keep every tool free</h2>
+    <p class="donation-free">Everything here is free, from the first chapter to the last resource.
+    Every episode, tool, guide, resource listed, and gathering stays free, end to end.</p>
+    <p class="donation-labor">Donations are how supporters help carry the research, production,
+    and upkeep behind the work. Nothing here has a price.</p>
+    <a class="donate-btn big" href="../donate.html" data-i18n="Donate">Donate</a>
   </div>
 </section>
 
 <script src="../assets/tools.js"></script>
 
+</main>
+
 <footer class="site-footer">
   <div class="foot-grid">
     <div>
       <p class="foot-brand">&#x2721; Etz Chaim <span class="foot-meaning">— the Tree of Life</span></p>
-      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-url">therightway.life</span></p>
+      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-separator" aria-hidden="true">·</span> <span class="foot-plate-url">therightway.life</span></p>
       <p>The whole Bible, chapter by chapter, in order — depicted as written from the
       oldest King James Version and the Hebrew Bible, cross-checked against the Dead Sea
       Scrolls where proven texts exist. We add no beliefs of our own; every episode lists its sources.</p>
@@ -101,20 +98,21 @@
       <p class="foot-head">Community</p>
       <a href="../community.html">Chavurot &amp; outreach</a>
       <a href="../youth.html">Youth</a>
-      <a href="../get-help.html">Get Help</a>
+      <a href="../get-help.html" data-i18n="Get Help">Get Help</a>
       <a href="../resources.html">Resource Center</a>
       <a href="../about.html">About &amp; Sources</a>
     </div>
     <div>
       <p class="foot-head">Give</p>
-      <p>Donations keep the journey free for everyone and fund community events,
-      youth activities, and outreach.</p>
-      <a class="donate-btn" href="../donate.html">Donate</a>
+      <p>Everything here is free, from the first chapter to the last resource. Every episode,
+      tool, guide, resource listed, and gathering stays free, end to end. Donations are how
+      supporters help carry the research, production, and upkeep behind the work.</p>
+      <a class="donate-btn" href="../donate.html" data-i18n="Donate">Donate</a>
     </div>
   </div>
   <p class="foot-fine">&copy; 2026 The Right Way &middot; Etz Chaim &middot; therightway.life &middot;
   Stories are presented as written; some are raw. Viewer discretion is advised.</p>
 </footer>
 <script src="../assets/site.js"></script>
-</body>
+<script src="../assets/lang-toggle.js"></script></body>
 </html>

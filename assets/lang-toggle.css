@@ -1,0 +1,10 @@
+/* Fleet language toggle — pattern after parleylingo.site (.lang-switch/.lang-btn).
+   Added uniformly to all three taste-opt previews by the YWC desk, 2026-11-17,
+   per Cameron's order: every preview carries all 7 choices, visible + clickable. */
+.lang-switch{display:inline-flex;align-items:center;flex-wrap:wrap;gap:1px;vertical-align:middle;margin-left:12px}
+.lang-btn{font:inherit;font-size:.72rem;letter-spacing:.02em;color:#fff;opacity:.55;background:none;border:none;padding:2px 5px;cursor:pointer;transition:opacity .15s}
+.lang-btn:hover{opacity:.9}
+.lang-btn:focus-visible{outline:2px solid #d4af37;outline-offset:2px;opacity:1}
+.lang-btn.active{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.lang-switch.translating{opacity:.5;pointer-events:none}
+@media (max-width:900px){.lang-switch{margin-left:8px}.lang-btn{font-size:.66rem;padding:2px 3px}}

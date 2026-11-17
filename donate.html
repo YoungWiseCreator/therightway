@@ -3,83 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate — Keep the Journey Free — Etz Chaim, the Tree of Life · The Right Way</title>
-<meta name="description" content="Donate to Etz Chaim / The Right Way: fund the 1,189-chapter journey, community events, youth activities, and outreach.">
+<title>Donate — Keep Everything Free — Etz Chaim, the Tree of Life · The Right Way</title>
+<meta name="description" content="Donate to Etz Chaim / The Right Way. Every episode, tool, guide, resource, and gathering stays free; donations help carry the work behind them.">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/config.js"></script>
-</head>
+<link rel="stylesheet" href="assets/lang-toggle.css"></head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-nav">
   <div class="brand-lockups">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">&#x2721;</span>
       <span class="brand-text">Etz Chaim<small>The Tree of Life</small></span>
     </a>
-    <span class="brand-plate" role="note" aria-label="The Right Way — therightway.life">
+    <span class="brand-plate" role="note" aria-label="The Right Way · therightway.life">
       <span class="brand-plate-name">The Right Way</span>
+      <span class="brand-plate-separator" aria-hidden="true">·</span>
       <span class="brand-plate-url">therightway.life</span>
     </span>
   </div>
-  <button class="nav-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">&#9776;</button>
-    <nav class="nav-links">
-    <div class="nav-item"><a class="nav-link" href="journey.html">The Journey</a></div>
-    <div class="nav-item"><a class="nav-link" href="watch.html">Watch</a></div>
-    <div class="nav-item"><a class="nav-link" href="study.html">Study</a></div>
-    <div class="nav-item"><a class="nav-link" href="blog/index.html">Blog</a></div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Community</a>
-      <div class="nav-dropdown">
-        <a href="community.html">Chavurot & Outreach</a>
-        <a href="youth.html">Youth</a>
-      </div>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+    <span aria-hidden="true">&#9776;</span><span class="nav-toggle-text">Menu</span>
+  </button>
+  <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+    <div class="nav-primary-links"><a href="journey.html" data-i18n="The Journey">The Journey</a><a href="watch.html" data-i18n="Watch">Watch</a><a href="study.html" data-i18n="Study">Study</a><a href="community.html" data-i18n="Community">Community</a><a href="get-help.html" data-i18n="Get Help">Get Help</a></div>
+    <div class="nav-more">
+      <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="more-navigation" aria-haspopup="true">More pages <span aria-hidden="true">&#9662;</span></button>
+      <div class="nav-more-menu" id="more-navigation"><a href="resources.html">Resource Center</a><a href="youth.html">Youth</a><a href="blog/index.html">Blog</a><a href="about.html" data-i18n="About & Sources">About & Sources</a></div>
     </div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Help</a>
-      <div class="nav-dropdown">
-        <a href="get-help.html">Get Help</a>
-        <a href="resources.html">Resource Center</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a class="nav-link" href="about.html">About & Sources</a>
-    </div>
-    <a class="donate-btn nav-donate" href="donate.html" aria-current="page">Donate</a>
-  </nav>
+    <a class="donate-btn nav-donate" href="donate.html" data-i18n="Donate">Donate</a>
+  <span class="lang-switch" role="group" aria-label="Choose language"><button type="button" class="lang-btn active" data-lang="en">English</button><button type="button" class="lang-btn" data-lang="es">Español</button><button type="button" class="lang-btn" data-lang="ht">Kreyòl Ayisyen</button><button type="button" class="lang-btn" data-lang="pt">Português</button><button type="button" class="lang-btn" data-lang="fr">Français</button><button type="button" class="lang-btn" data-lang="zh">中文</button><button type="button" class="lang-btn" data-lang="he">עברית</button></span></nav>
 </header>
+<main id="main-content">
 
-<section class="block"><div class="wrap">
-  <p class="kicker">Donate</p>
-  <h1 class="shimmer">Put your hand on the Tree</h1>
-  <p class="lede">Everything here is free — every episode, every study guide, every gathering — end to end, no paywalls, no tiers. The work carries a cost: research, production, upkeep, the gatherings and youth events that grow around the road. A gift carries that cost; it is never a price for access.</p>
-  <div style="text-align:center;margin:30px 0">
-    <a class="donate-btn big" href="donate.html">Donate</a>
-    <p style="color:var(--ink-dim);margin-top:12px">Secure online giving is being set up on our payment rail right now; this button activates the moment the giving link goes live, and this page will carry it first. Thank you for standing ready to give.</p>
+<section class="block donate-page"><div class="wrap donate-wrap">
+  <h1 data-i18n="Keep every story, tool, and resource free">Keep every story, tool, and resource free</h1>
+  <p class="lede">Everything here is free—every episode, every tool, every guide, every resource
+  listed, and every gathering. It stays free, end to end.</p>
+  <p class="donation-labor">Donations are how supporters help carry the research, production,
+  platform upkeep, and care behind the work. Nothing here has a price.</p>
+  <div class="donate-action">
+    <a class="donate-btn big" href="donate.html" data-i18n="Donate">Donate</a>
+    <p class="tool-note">Secure online giving is being set up. When it opens, this button will
+    lead there; until then, this page carries the full picture.
+    Everything remains free either way.</p>
   </div>
-  <h2>What your gift does</h2>
+  <h2>What donations support</h2>
   <table class="tiers">
-    <tr><th>Where it goes</th><th>What it makes happen</th></tr>
-    <tr><td><strong>The journey itself</strong></td><td>Producing all 1,189 chapter-episodes — research, art, narration, and the platform that carries them — kept free for every viewer.</td></tr>
-    <tr><td><strong>Community events</strong></td><td>Gatherings, study nights, and the meals where chavurot and neighbors actually meet.</td></tr>
-    <tr><td><strong>Youth activities</strong></td><td>Game nights, sports challenges, youth-led study, and the events that keep the next generation walking.</td></tr>
-    <tr><td><strong>Outreach sponsorship</strong></td><td>Direct help carried to families — and people walked to the real programs on our <a href="get-help.html">Get Help</a> page.</td></tr>
+    <tr><th>Where it goes</th><th>What it makes possible</th></tr>
+    <tr><td><strong>Chapter episodes</strong></td><td>Research, art, narration, and publishing for the 1,189-chapter journey, kept free for every viewer.</td></tr>
+    <tr><td><strong>Study tools and guides</strong></td><td>Free trackers, companion packs, study notes, and printable resources for every step of the journey.</td></tr>
+    <tr><td><strong>Community and youth</strong></td><td>Free gatherings, study nights, and youth activities where people can belong and walk together.</td></tr>
+    <tr><td><strong>Outreach and verification</strong></td><td>Keeping the Resource Center current and connecting people with verified, free programs.</td></tr>
   </table>
-  <h2 style="margin-top:32px">Fundraising initiatives</h2>
-  <div class="cards">
-    <div class="card reveal"><h3>Community events</h3><p>Gatherings that raise both funds and friends — study nights, holiday tables, and neighborhood events hosted by local chavurot.</p></div>
-    <div class="card reveal"><h3>Crowdfunding campaigns</h3><p>Seasonal campaigns for specific milestones on the road — a book completed, a youth season funded, an outreach drive carried.</p></div>
-    <div class="card reveal"><h3>Sponsorships & partnerships</h3><p>Aligned businesses and organizations can sponsor episodes, events, and outreach. See <a href="community.html">Community</a> for how partnership works here.</p></div>
-  </div>
-  <div class="note-box"><strong>Transparency:</strong> donations fund the platform's development and upkeep, community events, youth activities, and outreach — the work described on this page, and nothing else. Fundraising results and sponsored initiatives are reported to the community as they land.</div>
+  <p class="donation-warm">If you can give, you help carry the work. If you cannot, everything
+  here remains free.</p>
+  <div class="note-box"><strong>Transparency:</strong> donations support the work described on
+  this page: the research, production, upkeep, free tools, community gatherings, youth activities,
+  and outreach. No part of the site or channel is behind a paywall.</div>
 </div></section>
+
+</main>
 
 <footer class="site-footer">
   <div class="foot-grid">
     <div>
       <p class="foot-brand">&#x2721; Etz Chaim <span class="foot-meaning">— the Tree of Life</span></p>
-      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-url">therightway.life</span></p>
+      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-separator" aria-hidden="true">·</span> <span class="foot-plate-url">therightway.life</span></p>
       <p>The whole Bible, chapter by chapter, in order — depicted as written from the
       oldest King James Version and the Hebrew Bible, cross-checked against the Dead Sea
       Scrolls where proven texts exist. We add no beliefs of our own; every episode lists its sources.</p>
@@ -96,20 +90,21 @@
       <p class="foot-head">Community</p>
       <a href="community.html">Chavurot &amp; outreach</a>
       <a href="youth.html">Youth</a>
-      <a href="get-help.html">Get Help</a>
+      <a href="get-help.html" data-i18n="Get Help">Get Help</a>
       <a href="resources.html">Resource Center</a>
       <a href="about.html">About &amp; Sources</a>
     </div>
     <div>
       <p class="foot-head">Give</p>
-      <p>Donations keep the journey free for everyone and fund community events,
-      youth activities, and outreach.</p>
-      <a class="donate-btn" href="donate.html">Donate</a>
+      <p>Everything here is free, from the first chapter to the last resource. Every episode,
+      tool, guide, resource listed, and gathering stays free, end to end. Donations are how
+      supporters help carry the research, production, and upkeep behind the work.</p>
+      <a class="donate-btn" href="donate.html" data-i18n="Donate">Donate</a>
     </div>
   </div>
   <p class="foot-fine">&copy; 2026 The Right Way &middot; Etz Chaim &middot; therightway.life &middot;
   Stories are presented as written; some are raw. Viewer discretion is advised.</p>
 </footer>
 <script src="assets/site.js"></script>
-</body>
+<script src="assets/lang-toggle.js"></script></body>
 </html>

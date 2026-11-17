@@ -1,3 +1,4 @@
+
 // Etz Chaim / The Right Way — free tools engine (therightway.life)
 // All results are built in the visitor's browser. If INTAKE_ENDPOINT is
 // set in assets/config.js, the request is also sent there for follow-up.
@@ -53,7 +54,7 @@
       try {
         var rest = {};
         for (var k in data) { if (k !== "name" && k !== "email") rest[k] = data[k]; }
-        notes += " — inputs: " + JSON.stringify(rest);
+        notes += " \u2014 inputs: " + JSON.stringify(rest);
       } catch (e) {}
       try {
         fetch(INTAKE_ENDPOINT, {
@@ -192,10 +193,10 @@
     var lenLine = info ? (info[0].toLocaleString() + " words as written &middot; about " + Math.round(info[1]) + " minutes as an episode") : "length as written on the Journey map";
     showResult("<h2>Companion Pack — " + esc(d.book) + " " + esc(d.chapter) + "</h2>" +
       "<p>Assembled for " + esc(d.name) + " &middot; <strong>Episode " + ep + " of 1,189</strong> &middot; " + lenLine + ". Sources, as on every episode: the oldest proven King James Version, the Hebrew Bible cross-translated, and the Dead Sea Scrolls where proven texts exist.</p>" +
-      "<h3>1 &middot; Chapter guide</h3><p>Read " + esc(d.book) + " " + esc(d.chapter) + " whole, in one sitting, before anything else — the pack serves the chapter, never replaces it. Then place it: it is chapter " + esc(d.chapter) + " of " + esc(d.book) + ", episode " + ep + " on the road that runs Genesis 1 to Revelation 22 with no chapter skipped. Watch for three things as you read: who speaks, what changes between the chapter's first verse and its last, and the one sentence you would underline if you could underline only one.</p>" +
-      "<h3>2 &middot; Hebrew word-study sheet</h3><p><span class=\"hebrew\" lang=\"he\" style=\"font-size:1.5rem\">" + w[0] + "</span> &mdash; <strong><em>" + w[1] + "</em></strong>: " + w[2] + " Carry this word through the chapter: each time the English text touches its idea, hear the Hebrew underneath it.</p>" +
-      "<h3>3 &middot; Printable devotional</h3><p><strong>Carry this question today:</strong> What does " + esc(d.book) + " " + esc(d.chapter) + " say that I have been walking past — and what is one small, concrete thing I will do differently before tonight because of it? Write the answer in one sentence. That sentence is today's devotional; the chapter wrote it, you only had to stop for it.</p>" +
-      '<div class="note-box"><strong>Still in production:</strong> this chapter\'s episode and its full per-chapter study sheet publish together on the Journey (three episodes a day from Genesis 1). What is assembled above is everything that exists for this chapter today — free now, and free when the rest lands. Your place: <a href="../journey.html">the Journey map</a>.</div>');
+      "<h3>Chapter guide</h3><p>Read " + esc(d.book) + " " + esc(d.chapter) + " whole, in one sitting, before anything else — the pack serves the chapter, never replaces it. Then place it: it is chapter " + esc(d.chapter) + " of " + esc(d.book) + ", episode " + ep + " on the road that runs Genesis 1 to Revelation 22 with no chapter skipped. Watch for three things as you read: who speaks, what changes between the chapter's first verse and its last, and the one sentence you would underline if you could underline only one.</p>" +
+      "<h3>Hebrew word-study sheet</h3><p><span class=\"hebrew\" lang=\"he\" style=\"font-size:1.5rem\">" + w[0] + "</span> &mdash; <strong><em>" + w[1] + "</em></strong>: " + w[2] + " Carry this word through the chapter: each time the English text touches its idea, hear the Hebrew underneath it.</p>" +
+      "<h3>Printable devotional</h3><p><strong>Carry this question today:</strong> What does " + esc(d.book) + " " + esc(d.chapter) + " say that I have been walking past — and what is one small, concrete thing I will do differently before tonight because of it? Write the answer in one sentence. That sentence is today's devotional; the chapter wrote it, you only had to stop for it.</p>" +
+      '<div class="note-box"><strong>Chapter availability:</strong> the Journey map shows which chapters are available. Everything assembled above is free, and the pack clearly marks any study piece that is not available yet. Your place: <a href="../journey.html">the Journey map</a>.</div>');
   });
 
   // ---------- 1.3 Journey tracker ----------
@@ -209,9 +210,9 @@
       var s = fromEp(done + i); if (!s) break; var info = chapInfo(s.book, s.chapter);
       next += "<li><strong>Episode " + (done + i) + " — " + s.book + " " + s.chapter + "</strong>" + (info ? " (" + info[0].toLocaleString() + " words, about " + Math.round(info[1]) + " min)" : "") + "</li>";
     }
-    var left = 1189 - done; var daysAt3 = Math.ceil(left / 3);
+    var left = 1189 - done;
     showResult("<h2>Your Journey map, " + esc(d.name) + "</h2>" +
-      "<p><strong>" + done + " of 1,189 chapters behind you (" + pct + "%)</strong> &middot; you stand at the end of <strong>" + esc(d.book) + " " + esc(d.chapter) + "</strong> &middot; " + left + " chapters ahead — about " + daysAt3 + " days at the channel's three-a-day pace, or exactly as long as your own pace takes. Both are the road.</p>" +
+      "<p><strong>" + done + " of 1,189 chapters behind you (" + pct + "%)</strong> &middot; you stand at the end of <strong>" + esc(d.book) + " " + esc(d.chapter) + "</strong> &middot; " + left + " chapters ahead. Walk at your own pace; the map always shows the next chapter.</p>" +
       "<h3>Your next three episodes</h3><ul>" + next + "</ul>" +
       "<p>Your map is saved in this browser — come back any time, tell us your new stopping point, and the map redraws itself. Get each new chapter's free study pack from the <a href=\"companion-pack.html\">Chapter Companion Pack Builder</a>.</p>");
   });

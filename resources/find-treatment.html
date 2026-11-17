@@ -5,65 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FindTreatment.gov — Search Treatment Near You, Anonymously — Etz Chaim, the Tree of Life · The Right Way</title>
 <meta name="description" content="FindTreatment.gov is SAMHSA's confidential, anonymous locator for substance-use and mental-health treatment facilities across the U.S.">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <script src="../assets/config.js"></script>
-</head>
+<link rel="stylesheet" href="../assets/lang-toggle.css"></head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-nav">
   <div class="brand-lockups">
     <a class="brand" href="../index.html">
       <span class="brand-mark" aria-hidden="true">&#x2721;</span>
       <span class="brand-text">Etz Chaim<small>The Tree of Life</small></span>
     </a>
-    <span class="brand-plate" role="note" aria-label="The Right Way — therightway.life">
+    <span class="brand-plate" role="note" aria-label="The Right Way · therightway.life">
       <span class="brand-plate-name">The Right Way</span>
+      <span class="brand-plate-separator" aria-hidden="true">·</span>
       <span class="brand-plate-url">therightway.life</span>
     </span>
   </div>
-  <button class="nav-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">&#9776;</button>
-    <nav class="nav-links">
-    <div class="nav-item"><a class="nav-link" href="../journey.html">The Journey</a></div>
-    <div class="nav-item"><a class="nav-link" href="../watch.html">Watch</a></div>
-    <div class="nav-item"><a class="nav-link" href="../study.html">Study</a></div>
-    <div class="nav-item"><a class="nav-link" href="../blog/index.html">Blog</a></div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Community</a>
-      <div class="nav-dropdown">
-        <a href="../community.html">Chavurot & Outreach</a>
-        <a href="../youth.html">Youth</a>
-      </div>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+    <span aria-hidden="true">&#9776;</span><span class="nav-toggle-text">Menu</span>
+  </button>
+  <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+    <div class="nav-primary-links"><a href="../journey.html" data-i18n="The Journey">The Journey</a><a href="../watch.html" data-i18n="Watch">Watch</a><a href="../study.html" data-i18n="Study">Study</a><a href="../community.html" data-i18n="Community">Community</a><a href="../get-help.html" data-i18n="Get Help">Get Help</a></div>
+    <div class="nav-more active">
+      <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="more-navigation" aria-haspopup="true">More pages <span aria-hidden="true">&#9662;</span></button>
+      <div class="nav-more-menu" id="more-navigation"><a href="../resources.html" class="active" aria-current="page">Resource Center</a><a href="../youth.html">Youth</a><a href="../blog/index.html">Blog</a><a href="../about.html" data-i18n="About & Sources">About & Sources</a></div>
     </div>
-    <div class="nav-item">
-      <a class="nav-link" href="#">Help</a>
-      <div class="nav-dropdown">
-        <a href="../get-help.html">Get Help</a>
-        <a href="../resources.html">Resource Center</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a class="nav-link" href="../about.html">About & Sources</a>
-    </div>
-    <a class="donate-btn nav-donate" href="../donate.html">Donate</a>
-  </nav>
+    <a class="donate-btn nav-donate" href="../donate.html" data-i18n="Donate">Donate</a>
+  <span class="lang-switch" role="group" aria-label="Choose language"><button type="button" class="lang-btn active" data-lang="en">English</button><button type="button" class="lang-btn" data-lang="es">Español</button><button type="button" class="lang-btn" data-lang="ht">Kreyòl Ayisyen</button><button type="button" class="lang-btn" data-lang="pt">Português</button><button type="button" class="lang-btn" data-lang="fr">Français</button><button type="button" class="lang-btn" data-lang="zh">中文</button><button type="button" class="lang-btn" data-lang="he">עברית</button></span></nav>
 </header>
+<main id="main-content">
 
 <section class="block"><div class="wrap">
-  <p class="kicker">Resource Center &middot; Start Here</p>
-  <h1 class="shimmer">FindTreatment.gov — Search Treatment Near You, Anonymously</h1>
+  <h1>FindTreatment.gov — Search Treatment Near You, Anonymously</h1>
   <p class="lede">If you would rather look quietly on your own screen before you talk to anyone, this is the federal government&rsquo;s own search tool — confidential, anonymous, and free.</p>
+  <div class="official-door">
+    <h2>Start now</h2>
+    <p><a href="https://findtreatment.gov" rel="noopener">findtreatment.gov</a> &middot; Questions: SAMHSA Helpline <strong>1-800-662-HELP (4357)</strong></p>
+  </div>
+  <h2>How to start — step by step</h2>
+  <ol class="steps"><li style="margin-bottom:10px">Go to <a href="https://findtreatment.gov" rel="noopener">findtreatment.gov</a>.</li><li style="margin-bottom:10px">Enter your city, state, or ZIP code.</li><li style="margin-bottom:10px">Use the filters to narrow by facility type and by payment options — look for facilities listing free, sliding-scale, or government-funded care if cost is the wall in front of you.</li><li style="margin-bottom:10px">Open a facility&rsquo;s listing and read what it offers, who it serves, and how intake works.</li><li style="margin-bottom:10px">Call the facility directly. Ask plainly: what does it cost, is there a waiting list, and what should I bring? Asking is free, and they answer these questions all day.</li><li style="margin-bottom:10px">If searching feels like too much right now, let a person do it with you: call the <a href="samhsa-helpline.html">SAMHSA Helpline, 1-800-662-HELP</a>.</li></ol>
   <div class="cards">
     <div class="card"><h3>What it is</h3><p>FindTreatment.gov is run by SAMHSA, the U.S. Substance Abuse and Mental Health Services Administration. It is a confidential and anonymous source of information about treatment facilities across the United States for substance use and mental health — searchable by location, facility type, and payment options.</p></div>
     <div class="card"><h3>Who it is for</h3><p>Anyone looking for treatment options near home — for yourself or for someone you love — including people looking specifically for facilities with free, sliding-scale, or reduced-cost care.</p></div>
     <div class="card"><h3>What it costs</h3><p><strong>Free.</strong> The search is free, and it asks for no personal information — no name, no account, no sign-up.</p></div>
   </div>
-  <h2 style="margin-top:36px">How to start — step by step</h2>
-  <ol style="font-size:1.08rem;line-height:1.65;padding-left:22px"><li style="margin-bottom:10px">Go to <a href="https://findtreatment.gov" rel="noopener">findtreatment.gov</a>.</li><li style="margin-bottom:10px">Enter your city, state, or ZIP code.</li><li style="margin-bottom:10px">Use the filters to narrow by facility type and by payment options — look for facilities listing free, sliding-scale, or government-funded care if cost is the wall in front of you.</li><li style="margin-bottom:10px">Open a facility&rsquo;s listing and read what it offers, who it serves, and how intake works.</li><li style="margin-bottom:10px">Call the facility directly. Ask plainly: what does it cost, is there a waiting list, and what should I bring? Asking is free, and they answer these questions all day.</li><li style="margin-bottom:10px">If searching feels like too much right now, let a person do it with you: call the <a href="samhsa-helpline.html">SAMHSA Helpline, 1-800-662-HELP</a>.</li></ol>
-  <h2 style="margin-top:30px">What to expect at the first step</h2>
+  <h2>What to expect at the first step</h2>
   <p class="lede">No account and no personal information are required — the search itself is anonymous. What you will find is real facilities with real phone numbers. The next step after searching is a phone call, and that call is the door actually opening.</p>
-  <div class="note-box"><strong>Official door:</strong> <a href="https://findtreatment.gov" rel="noopener">findtreatment.gov</a> &middot; Questions: SAMHSA Helpline <strong>1-800-662-HELP (4357)</strong></div>
   
   <div class="note-box"><strong>If this moment is heavier than a guide can hold</strong> — if you
   feel you might harm yourself — call or text <strong>988</strong> right now. The 988 Suicide
@@ -76,18 +68,23 @@
 
 <section class="donate-band reveal">
   <div class="band-inner">
-    <h2>This center stays free because people give</h2>
-    <p>Every guide on this site is free, and every program it points to is free. Donations keep therightway.life open for the next person having the hardest day of their life.</p>
-    <a class="donate-btn big" href="../donate.html">Donate</a>
+    <h2>Keep every resource guide free</h2>
+    <p class="donation-free">Everything here is free, from the first chapter to the last resource.
+    Every episode, tool, guide, resource listed, and gathering stays free, end to end.</p>
+    <p class="donation-labor">Donations are how supporters help carry the research, production,
+    and upkeep behind the work. Nothing here has a price.</p>
+    <a class="donate-btn big" href="../donate.html" data-i18n="Donate">Donate</a>
   </div>
 </section>
 
+
+</main>
 
 <footer class="site-footer">
   <div class="foot-grid">
     <div>
       <p class="foot-brand">&#x2721; Etz Chaim <span class="foot-meaning">— the Tree of Life</span></p>
-      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-url">therightway.life</span></p>
+      <p class="foot-plate"><span class="foot-plate-name">The Right Way</span> <span class="foot-plate-separator" aria-hidden="true">·</span> <span class="foot-plate-url">therightway.life</span></p>
       <p>The whole Bible, chapter by chapter, in order — depicted as written from the
       oldest King James Version and the Hebrew Bible, cross-checked against the Dead Sea
       Scrolls where proven texts exist. We add no beliefs of our own; every episode lists its sources.</p>
@@ -104,20 +101,21 @@
       <p class="foot-head">Community</p>
       <a href="../community.html">Chavurot &amp; outreach</a>
       <a href="../youth.html">Youth</a>
-      <a href="../get-help.html">Get Help</a>
+      <a href="../get-help.html" data-i18n="Get Help">Get Help</a>
       <a href="../resources.html">Resource Center</a>
       <a href="../about.html">About &amp; Sources</a>
     </div>
     <div>
       <p class="foot-head">Give</p>
-      <p>Donations keep the journey free for everyone and fund community events,
-      youth activities, and outreach.</p>
-      <a class="donate-btn" href="../donate.html">Donate</a>
+      <p>Everything here is free, from the first chapter to the last resource. Every episode,
+      tool, guide, resource listed, and gathering stays free, end to end. Donations are how
+      supporters help carry the research, production, and upkeep behind the work.</p>
+      <a class="donate-btn" href="../donate.html" data-i18n="Donate">Donate</a>
     </div>
   </div>
   <p class="foot-fine">&copy; 2026 The Right Way &middot; Etz Chaim &middot; therightway.life &middot;
   Stories are presented as written; some are raw. Viewer discretion is advised.</p>
 </footer>
 <script src="../assets/site.js"></script>
-</body>
+<script src="../assets/lang-toggle.js"></script></body>
 </html>
