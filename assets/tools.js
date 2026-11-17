@@ -111,7 +111,7 @@
 
   function programCards(cat) {
     return PROGRAMS[cat].map(function (p) {
-      return '<div class="card"><h3>' + esc(p.n) + "</h3><p><strong>Cost:</strong> " + esc(p.free) + "</p><p><strong>How to start:</strong> " + esc(p.steps) + '</p><p><a href="' + p.door + '" rel="noopener">Official door: ' + esc(p.doorText) + " &rarr;</a>" + (p.guide ? ' &middot; <a href="' + p.guide + '">Our step-by-step guide</a>' : "") + "</p></div>";
+      return '<div class="card"><h3>' + esc(p.n) + "</h3><p><strong>Cost:</strong> " + esc(p.free) + "</p><p><strong>How to start:</strong> " + esc(p.steps) + '</p><p><a href="' + p.door + '" rel="noopener">Official door: ' + esc(p.doorText) + "</a>" + (p.guide ? ' &middot; <a href="' + p.guide + '">Our step-by-step guide</a>' : "") + "</p></div>";
     }).join("");
   }
 

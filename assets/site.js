@@ -70,6 +70,34 @@
   });
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // The Tree of Life grows as the Latest Episodes act scrolls through:
+  // a sticky stage plus a rAF scrub setting --grow (0..1) on the tree.
+  // No-JS and reduced-motion keep the CSS default: the tree fully grown.
+  var peak = document.querySelector(".peak");
+  var peakTree = document.querySelector(".peak-tree");
+  if (peak && peakTree && !reducedMotion) {
+    var ticking = false;
+    var setGrow = function () {
+      ticking = false;
+      var rect = peak.getBoundingClientRect();
+      var total = rect.height - window.innerHeight;
+      var p = total > 0 ? -rect.top / total : (rect.top < 0 ? 1 : 0);
+      if (p < 0) p = 0;
+      if (p > 1) p = 1;
+      peakTree.style.setProperty("--grow", p.toFixed(4));
+    };
+    var onScroll = function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(setGrow);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    setGrow();
+  }
+
   var revealItems = document.querySelectorAll(".reveal");
   if (reducedMotion || !("IntersectionObserver" in window)) {
     revealItems.forEach(function (item) { item.classList.add("in"); });
