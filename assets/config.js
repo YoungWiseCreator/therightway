@@ -4,13 +4,14 @@ document.documentElement.classList.add('js');
 // ------------------------------------------------------------
 // DONATE_LINK: the single Stripe donation link for therightway.life.
 // Every Donate button on the site reads this one constant.
-// STATUS AT LAUNCH (2026-11-16): EMPTY — no Stripe donation link
-// exists yet for therightway.life. While empty, donation buttons
-// route to the Donate page (donate.html). The moment the Stripe
-// link is created, paste it here — one edit lights up every
-// button on the site.
+// STATUS: LIVE (2026-11-18) — Stripe donation link created on the
+// fleet account of record (AIDCOS, acct_1TbMSGFRf1U6fUlZ):
+// payment link plink_1UdE2jFRf1U6fUlZglemG2FQ, product
+// prod_VeX6JxI92P1yVe ("The Right Way — Donation"), donor-set
+// amount, submit_type=donate. While this constant were ever empty,
+// donation buttons would route to the Donate page (donate.html).
 // ============================================================
-const DONATE_LINK = "";
+const DONATE_LINK = "https://donate.stripe.com/7sY14ndkyfG1833aGLeAg1m";
 
 // INTAKE_ENDPOINT: the single free-intake endpoint for the site's
 // done-for-you tools (tools/). Same pattern as DONATE_LINK above.

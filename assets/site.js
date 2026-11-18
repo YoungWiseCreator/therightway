@@ -1,8 +1,14 @@
 // Etz Chaim / The Right Way — site behaviour
 (function () {
   // Wire every donation button to the single DONATE_LINK constant.
+  // Selector targets exactly the true Donate anchors: any anchor that
+  // points at the Donate page AND is labelled Donate (nav, hero band,
+  // footer, and in-body Donate links). The shared .donate-btn style
+  // class alone is NOT used as the selector — a few non-donate buttons
+  // (Begin the Journey, Resource Center, YouTube) carry that class for
+  // styling and must keep their own targets.
   if (typeof DONATE_LINK !== "undefined" && DONATE_LINK) {
-    document.querySelectorAll("a.donate-btn").forEach(function (a) {
+    document.querySelectorAll('a[href$="donate.html"][data-i18n="Donate"]').forEach(function (a) {
       a.setAttribute("href", DONATE_LINK);
       a.setAttribute("target", "_blank");
       a.setAttribute("rel", "noopener");
