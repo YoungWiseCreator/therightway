@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 // ============================================================
 // Etz Chaim / The Right Way — site configuration
 // ------------------------------------------------------------

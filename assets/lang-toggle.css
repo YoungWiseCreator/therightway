@@ -1,0 +1,14 @@
+/* Hallmark · therightway.life · CCR full-stack refinement (Layers 0-3), genre editorial
+   The template read as a generic blue theme; this refinement sharpens the owner's picked
+   CCR night-sky design: semantic tokens, strict label discipline, one drawn road.
+   All colour and type now flow from :root; no pure #fff/#000; reveal scoped to html.js. */
+/* Fleet language toggle — pattern after parleylingo.site (.lang-switch/.lang-btn).
+   Added to the CCR taste-opt preview by the YWC desk, 2026-11-17, with the
+   current 7-language set (EN · ES · FR · PT · RU · ZH · HE). */
+.lang-switch{display:inline-flex;align-items:center;flex-wrap:wrap;gap:1px;vertical-align:middle;margin-left:12px}
+.lang-btn{font:inherit;font-size:.72rem;letter-spacing:.02em;color:var(--white);opacity:.55;background:none;border:none;padding:2px 5px;cursor:pointer;transition:opacity .15s}
+.lang-btn:hover{opacity:.9}
+.lang-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;opacity:1}
+.lang-btn.active{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.lang-switch.translating{opacity:.5;pointer-events:none}
+@media (max-width:900px){.lang-switch{margin-left:8px}.lang-btn{font-size:.66rem;padding:2px 3px}}

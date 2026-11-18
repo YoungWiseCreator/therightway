@@ -1,0 +1,96 @@
+/* depth.css — Layer 3 Depth (Open Design strategies + Scrollcraft)
+   Hallmark: therightway.life · chunk C · DESIGN_VARIANCE 4/10 · MOTION_INTENSITY 4/10 · VISUAL_DENSITY 4/10 */
+
+:root{
+  --road-w:3px;
+  --road-gap:26px;
+  --peak-bg:#030b16;
+}
+
+.peak-act{
+  position:relative;
+  background:var(--peak-bg);
+  box-shadow:0 0 0 100vmax var(--peak-bg);
+  clip-path:inset(0 -100vmax);
+  padding-top:var(--space-xl,48px);
+  padding-bottom:var(--space-xl,48px);
+}
+.peak-act .card{
+  background:var(--panel);
+}
+
+.road{
+  position:relative;
+  height:34px;
+  margin-bottom:var(--space-lg,32px);
+}
+.road-line{
+  position:absolute;
+  left:4%;
+  right:4%;
+  top:50%;
+  height:var(--road-w);
+  background:var(--gold);
+  transform-origin:left;
+  transform:scaleX(1);
+  will-change:transform;
+}
+.road-dot{
+  position:absolute;
+  top:50%;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:var(--gold);
+  border:2px solid var(--gold-bright);
+}
+html.js .road-line{
+  transform:scaleX(var(--road,0));
+  transition:transform 0.1s linear;
+}
+html.js .road-dot{
+  background:transparent;
+  border-color:transparent;
+  transition:background 0.15s ease, border-color 0.15s ease;
+}
+html.js .road-dot.lit{
+  background:var(--gold);
+  border-color:var(--gold-bright);
+}
+
+.post-nav a{
+  margin-right:18px;
+}
+
+.foot-fine span{
+  display:inline-block;
+  margin-right:14px;
+}
+
+a.donate-btn:active,
+.btn-ghost:active,
+.nav-links a:active,
+.tool-submit:active{
+  transform:translateY(1px);
+}
+
+.tool-field input:disabled,
+.tool-field select:disabled{
+  opacity:.55;
+  background:var(--gold-soft-bg);
+  color:var(--silver);
+  cursor:not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html.js .road-line{
+    transform:scaleX(1) !important;
+    transition:none;
+  }
+  html.js .road-dot{
+    background:var(--gold) !important;
+    border-color:var(--gold-bright) !important;
+    transition:none;
+  }
+}
