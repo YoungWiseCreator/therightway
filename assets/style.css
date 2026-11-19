@@ -265,3 +265,12 @@ body.nav-open .nav-links a:focus-visible{
 .lang-note{letter-spacing:0}
 .crisis-box .cb-label{letter-spacing:0}
 label{letter-spacing:0}
+/* Blog design pass 2026-11-19: reading rhythm, chapter spacing, section-photo frame, index thumbnails */
+article.post p{line-height:1.75; margin-bottom:1.4em}
+article.post h2{margin-top:2.2em}
+article.post figure.post-image{margin:2.2em 0}
+article.post figure.post-image img{width:100%; height:auto; display:block; border-radius:16px}
+article.post img{max-width:100%}
+.post-list{gap:27px}
+.post-card{padding:33px}
+.post-card .card-thumb{width:100%; height:auto; display:block; border-radius:12px; margin-bottom:16px}
