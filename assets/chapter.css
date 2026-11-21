@@ -1,0 +1,46 @@
+/* chapter.css — The Right Way chapter pages (Read · Watch · Listen).
+   Layered on assets/style.css; uses the site's own palette variables. */
+
+/* ---------- Listen ---------- */
+.wl-listen{border:2px solid var(--color-accent,#c8401f);border-radius:14px;
+  padding:16px 18px 14px;margin:18px 0 8px;background:rgba(127,127,127,.07)}
+.wl-listen h2{margin:0 0 4px;font-size:1.25rem}
+.wl-listen .wl-sub{margin:0 0 10px;color:var(--color-muted,#8a8378);font-size:.95rem;line-height:1.45}
+.wl-listen audio{width:100%;height:44px}
+.wl-listen .wl-note{margin:8px 0 0;font-size:.85rem;color:var(--color-muted,#8a8378)}
+
+/* ---------- Watch ---------- */
+.wl-watch{margin:26px 0 8px}
+.wl-watch h2{margin:0 0 4px}
+.wl-watch .wl-sub{margin:0 0 14px;color:var(--color-muted,#8a8378);font-size:.95rem;line-height:1.45}
+.wl-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){.wl-grid{grid-template-columns:repeat(3,1fr)}}
+.wl-card{border:1px solid var(--color-edge-strong,rgba(130,130,130,.5));border-radius:12px;
+  overflow:hidden;background:rgba(127,127,127,.05);display:flex;flex-direction:column}
+.wl-facade{appearance:none;border:0;padding:0;margin:0;background:#000;cursor:pointer;
+  position:relative;display:block;width:100%;aspect-ratio:16/9;text-align:left}
+.wl-facade img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.wl-facade .wl-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.wl-facade .wl-play span{width:64px;height:64px;border-radius:50%;
+  background:rgba(0,0,0,.62);display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:24px;line-height:1;padding-left:4px}
+.wl-facade:hover .wl-play span{background:var(--color-accent,#c8401f)}
+.wl-frame{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000}
+.wl-meta{padding:10px 12px 12px}
+.wl-meta .wl-title{font-weight:700;line-height:1.3;margin:0 0 4px;font-size:.98rem}
+.wl-meta .wl-by{margin:0;font-size:.85rem;color:var(--color-muted,#8a8378)}
+.wl-own{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;border:1px solid var(--color-accent,#c8401f);
+  color:var(--color-accent,#c8401f);border-radius:999px;padding:2px 8px;margin-bottom:6px}
+
+/* ---------- Read ---------- */
+.wl-read{margin:26px 0 8px}
+.wl-read h2{margin:0 0 10px}
+.wl-verses p{margin:0 0 .55em;line-height:1.65;font-size:1.06rem}
+.wl-verses sup{font-size:.68em;font-weight:700;color:var(--color-accent,#c8401f);
+  margin-right:.35em;vertical-align:super}
+.wl-src{font-size:.85rem;color:var(--color-muted,#8a8378);margin-top:14px;line-height:1.5}
+
+/* ---------- Chapter nav ---------- */
+.wl-nav{display:flex;justify-content:space-between;gap:12px;margin:30px 0 6px;flex-wrap:wrap}
+.wl-nav a{font-weight:600}
