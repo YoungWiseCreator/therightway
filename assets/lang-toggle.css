@@ -4,11 +4,16 @@
    All colour and type now flow from :root; no pure #fff/#000; reveal scoped to html.js. */
 /* Fleet language toggle — pattern after parleylingo.site (.lang-switch/.lang-btn).
    Added to the CCR taste-opt preview by the YWC desk, 2026-11-17, with the
-   current 7-language set (EN · ES · FR · PT · RU · ZH · HE). */
-.lang-switch{display:inline-flex;align-items:center;flex-wrap:wrap;gap:1px;vertical-align:middle;margin-left:12px}
-.lang-btn{font:inherit;font-size:.72rem;letter-spacing:.02em;color:var(--white);opacity:.55;background:none;border:none;padding:2px 5px;cursor:pointer;transition:opacity .15s}
-.lang-btn:hover{opacity:.9}
-.lang-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;opacity:1}
-.lang-btn.active{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+   current 7-language set (EN · ES · FR · PT · RU · ZH · HE).
+   Tester grind P1-5 cure (2026-11-21): the switcher now lives OUTSIDE the
+   collapsible nav (markup moved beside it in every page) so it is visible
+   without opening the hamburger; buttons are ≥44px-tall, full-size,
+   full-opacity targets; the active language is marked by gold colour +
+   bold + underline, not underline alone. */
+.lang-switch{display:inline-flex;align-items:center;flex-wrap:wrap;gap:2px;vertical-align:middle;margin-left:12px}
+.lang-btn{font:inherit;font-size:.95rem;letter-spacing:.02em;color:var(--white);opacity:1;background:none;border:none;padding:11px 10px;min-height:44px;cursor:pointer;transition:opacity .15s}
+.lang-btn:hover{color:var(--gold-bright)}
+.lang-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lang-btn.active{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:3px;color:var(--gold-bright)}
 .lang-switch.translating{opacity:.5;pointer-events:none}
-@media (max-width:900px){.lang-switch{margin-left:8px}.lang-btn{font-size:.66rem;padding:2px 3px}}
+@media (max-width:900px){.lang-switch{margin-left:auto}.lang-btn{font-size:.95rem;padding:11px 9px}}

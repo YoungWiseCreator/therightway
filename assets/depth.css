@@ -17,7 +17,14 @@
 }
 .peak-act .card{
   background:var(--panel);
+  /* The base .card now carries the cream-ground ink set (P0-1 cure);
+     these dark-panel cards keep the light ink set they always passed with. */
+  color:var(--ink);
 }
+.peak-act .card h3{color:var(--gold-bright)}
+.peak-act .card .glyph{color:var(--gold)}
+.peak-act .card a{color:var(--gold-bright)}
+.peak-act .card a:hover{color:var(--white)}
 
 .road{
   position:relative;
