@@ -306,3 +306,17 @@ article.post img{max-width:100%}
 .post-list{gap:27px}
 .post-card{padding:33px}
 .post-card .card-thumb{width:100%; height:auto; display:block; border-radius:12px; margin-bottom:16px}
+
+/* STITCH TRANSPLANT 2026-11-21 — design layer from the Stitch mockup for
+   therightway.life (Site 9): Sacred Manuscript — Newsreader serif display
+   type, Deep Slate #131c2e display ink on the ivory manuscript cards,
+   Gold #b45309 accents, ivory #fbf9f4 card ground with #e7e3d8 rules.
+   Applied to the site's typography + card layer; the owner-picked night
+   ground and every word, page and library/player function are unchanged.
+   DESIGN ONLY — no copy, no prices (the site has none), no donations
+   wording changed. */
+h1,h2,h3{font-family:"Newsreader","Cormorant Garamond",Georgia,serif}
+.card,.post-card{background:#fbf9f4;color:#2e2410;border:1px solid #e7e3d8;border-radius:16px}
+.card h2,.card h3,.post-card h2,.post-card h3{color:#131c2e}
+.donate-btn{background:#b45309;color:#ffffff;border-radius:12px}
+.standfirst{color:#b45309}
