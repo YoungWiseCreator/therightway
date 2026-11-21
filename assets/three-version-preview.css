@@ -1,0 +1,23 @@
+/* Phase 0 preview additions for the Hebrew + Quran libraries.
+   Preview-only stylesheet: production folds these into chapter.css. */
+.tv-explain{background:var(--panel,#f6efdd);border:1px solid var(--line,#d8c690);
+  border-radius:12px;padding:1.1rem 1.25rem;margin:1.2rem 0}
+.tv-explain h2{margin-top:0}
+.tv-explain p{margin:.55rem 0}
+.tv-sample-note{font-size:.85rem;opacity:.85;font-style:italic}
+.tv-player-label{font-weight:700;margin:.9rem 0 .3rem}
+.tv-rtl{direction:rtl;text-align:right;font-size:1.28rem;line-height:2.1}
+.tv-rtl p{margin:.35rem 0}
+.tv-ar{font-size:1.45rem;line-height:2.2}
+.tv-en{border-left:3px solid var(--gold,#D4AF37);padding-left:1rem}
+.tv-map{width:100%;border-collapse:collapse;margin:.6rem 0 1.4rem}
+.tv-map td,.tv-map th{padding:.34rem .5rem;border-bottom:1px solid var(--line,#ddd)}
+.tv-map .tv-heb{font-size:1.05rem}
+.tv-soon{opacity:.55}
+.tv-progress{font-weight:700}
+.tv-band-note{border:1px dashed var(--line,#bbb);border-radius:10px;
+  padding:1rem 1.2rem}
+.tv-switch{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.tv-switch a{border:1px solid var(--line,#bbb);border-radius:999px;
+  padding:.35rem .9rem;text-decoration:none}
+.tv-switch a.tv-here{font-weight:700;border-width:2px}
