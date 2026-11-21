@@ -25,8 +25,18 @@
   var CFG;
   try { CFG = JSON.parse(cfgEl.textContent); } catch (e) { return; }
 
-  var LS_KEY = 'trw_cp_state_v1';
-  var SS_KEY = 'trw_cp_chain_v1';
+  /* Library-aware (Cameron extension 2026-11-21 ~14:31 EST): the same
+   * player serves all three libraries — KJV, Hebrew Bible, Quran.
+   * CFG.library names the library ('kjv' default, 'hebrew', 'quran');
+   * state is namespaced per library so a chain NEVER crosses from one
+   * library into another (the libraries stay separate and unmixed),
+   * and CFG.lang/CFG.dir let Hebrew (he, rtl) and Quran (ar, rtl)
+   * chapter pages carry their own language and direction. */
+  var LIB = (CFG.library === 'hebrew' || CFG.library === 'quran') ? CFG.library : 'kjv';
+  var LS_KEY = 'trw_cp_state_v1_' + LIB;
+  var SS_KEY = 'trw_cp_chain_v1_' + LIB;
+  if (CFG.lang) root.setAttribute('lang', CFG.lang);
+  if (CFG.dir) root.setAttribute('dir', CFG.dir);
 
   function loadState() {
     try {
