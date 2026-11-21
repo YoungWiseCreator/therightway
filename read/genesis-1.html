@@ -49,6 +49,46 @@
     <p class="wl-note">Read in the same voice that narrates The Right Way episodes.</p>
   </section>
 
+  <section class="cp" id="chapter-player" data-i18n-skip>
+    <h2>Chapter Player</h2>
+    <p class="cp-sub">Choose how to go through Genesis 1 — watch it, or hear it read —
+    and let it carry you into the next chapter. Press play once; with autoplay
+    on, each chapter hands you to the next.</p>
+    <div class="cp-row" role="group" aria-label="Choose how to play">
+      <button type="button" class="cp-mode" data-mode="video">Watch the chapter</button>
+      <button type="button" class="cp-mode" data-mode="audio">Listen only</button>
+    </div>
+    <div class="cp-row cp-versions" role="group" aria-label="Choose a version">
+      <button type="button" class="cp-ver" data-version="kids">For Kids · Cartoon</button>
+      <button type="button" class="cp-ver" data-version="adult">For Adults · Realistic</button>
+      <button type="button" class="cp-ver" data-version="third">Another View</button>
+    </div>
+    <div class="cp-stage">
+      <div class="cp-ytwrap" id="cp-stage-video"><div id="cp-yt"></div></div>
+      <div class="cp-audio-panel" id="cp-stage-audio" hidden>
+        <p class="cp-audio-big">Genesis 1 — read word for word</p>
+        <audio id="cp-audio" controls preload="none" src="../assets/audio/genesis-1.mp3">Your browser does not support audio playback.</audio>
+      </div>
+      <div class="cp-overlay" id="cp-prompt" hidden>
+        <p>Still there? Three chapters have played — the story goes on whenever you are ready.</p>
+        <div class="cp-row">
+          <button type="button" id="cp-keepgoing">Keep going</button>
+          <button type="button" id="cp-stop">Stop here</button>
+        </div>
+      </div>
+      <div class="cp-overlay" id="cp-resume" hidden>
+        <p>The next chapter is ready.</p>
+        <div class="cp-row"><button type="button" id="cp-resume-btn">Continue</button></div>
+      </div>
+    </div>
+    <div class="cp-controls">
+      <button type="button" class="cp-play" id="cp-play">Play Genesis 1</button>
+      <button type="button" id="cp-autoplay" aria-pressed="false">Autoplay: Off</button>
+      <label class="cp-sleep"><input type="checkbox" id="cp-sleep"> Sleep mode — play on through the night, no check-ins</label>
+    </div>
+    <p class="cp-status" id="cp-status" role="status"></p>
+  </section>
+
   <section class="wl-read">
     <h2>Read Genesis 1</h2>
     <div class="wl-verses">
@@ -91,32 +131,31 @@
 
   <section class="wl-watch wl-band" data-i18n-skip>
     <h2>Watch Genesis 1</h2>
-    <p class="wl-sub">The best full-chapter visualizations we could find, chosen for how
-    faithfully they show the chapter and how viewers responded. Pick one — it plays
-    right here on this page. Every video below shows this chapter only: where a
-    film covers more of the story, the player plays just this chapter's part.</p>
+    <p class="wl-sub">Three ways to watch this chapter: a cartoon telling for kids, a realistic telling for adults, and a third viewpoint. Every video below shows this chapter only: where a film covers more of the story, the player plays just this chapter&rsquo;s part.</p>
     <div class="wl-grid">
     <div class="wl-card">
+      <button type="button" class="wl-facade" data-ytid="h3HjZcf8Wpc" data-title="Genesis 1 — Creation" aria-label="Play video: Genesis 1 — Creation">
+        <img src="https://i.ytimg.com/vi/h3HjZcf8Wpc/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+        <span class="wl-play"><span>&#9654;</span></span>
+      </button>
+      <div class="wl-meta"><span class="wl-ver">For Kids · Cartoon</span><span class="wl-own">Our episode · The Right Way</span><p class="wl-title">Genesis 1 — Creation</p>
+      <p class="wl-by">The Right Way</p></div>
+    </div>
+<div class="wl-card">
       <button type="button" class="wl-facade" data-ytid="FN6htUp8xps" data-end="392" data-title="🌍 Genesis Chapters 1-14 Visualized | KJV Bible in Epic AI 4K" aria-label="Play video: 🌍 Genesis Chapters 1-14 Visualized | KJV Bible in Epic AI 4K">
         <img src="https://i.ytimg.com/vi/FN6htUp8xps/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
         <span class="wl-play"><span>&#9654;</span></span>
       </button>
-      <div class="wl-meta"><p class="wl-title">🌍 Genesis Chapters 1-14 Visualized | KJV Bible in Epic AI 4K</p>
+      <div class="wl-meta"><span class="wl-ver">For Adults · Realistic</span><p class="wl-title">🌍 Genesis Chapters 1-14 Visualized | KJV Bible in Epic AI 4K</p>
       <p class="wl-by">Make Heaven Crowded · 2.4M views</p></div>
-    </div><div class="wl-card">
+    </div>
+<div class="wl-card">
       <button type="button" class="wl-facade" data-ytid="hyC92c0k5_I" data-title="The Creation Story – Genesis 1 | Ai Animated Bible Story" aria-label="Play video: The Creation Story – Genesis 1 | Ai Animated Bible Story">
         <img src="https://i.ytimg.com/vi/hyC92c0k5_I/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
         <span class="wl-play"><span>&#9654;</span></span>
       </button>
-      <div class="wl-meta"><p class="wl-title">The Creation Story – Genesis 1 | Ai Animated Bible Story</p>
+      <div class="wl-meta"><span class="wl-ver">Another View</span><p class="wl-title">The Creation Story – Genesis 1 | Ai Animated Bible Story</p>
       <p class="wl-by">Bible Brick Stories · 52K views</p></div>
-    </div><div class="wl-card">
-      <button type="button" class="wl-facade" data-ytid="NcBPacJ_Tak" data-title="Genesis 1 — The Beginning | Full Chapter Bible Story (KJV)" aria-label="Play video: Genesis 1 — The Beginning | Full Chapter Bible Story (KJV)">
-        <img src="https://i.ytimg.com/vi/NcBPacJ_Tak/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
-        <span class="wl-play"><span>&#9654;</span></span>
-      </button>
-      <div class="wl-meta"><p class="wl-title">Genesis 1 — The Beginning | Full Chapter Bible Story (KJV)</p>
-      <p class="wl-by">Scripture Cinema · 647 views</p></div>
     </div>
     </div>
   </section>
@@ -166,5 +205,7 @@
 <script src="../assets/lang-toggle.js"></script>
 <script src="../assets/depth.js"></script><script src="../assets/watch-listen.js" defer></script>
 <script src="../assets/watch-listen.js" defer></script>
+<script type="application/json" id="cp-config">{"name":"Genesis 1","audio":"../assets/audio/genesis-1.mp3","next":"genesis-2.html","nextName":"Genesis 2","versions":{"kids":{"ytid":"h3HjZcf8Wpc"},"adult":{"ytid":"FN6htUp8xps","end":392},"third":{"ytid":"hyC92c0k5_I"}}}</script>
+<script src="../assets/chapter-player.js" defer></script>
 </body>
 </html>

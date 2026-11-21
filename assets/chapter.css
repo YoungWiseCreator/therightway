@@ -70,3 +70,44 @@ main>article{max-width:760px;margin:0 auto;padding:28px 20px 10px}
 .wl-nav{display:flex;justify-content:space-between;gap:12px;margin:30px 0 6px;flex-wrap:wrap}
 .wl-nav a{font-weight:600}
 .wl-soon{color:var(--color-muted);font-weight:600}
+
+/* ---------- Chapter player (Cameron spec 2026-11-21 ~14:24 EST):
+   mode chooser (watch / listen only), three-version band, autoplay
+   chain with a daytime "still there?" check-in after three chapters
+   and a sleep mode with no check-ins. ---------- */
+.cp{border:2px solid var(--color-accent,#c8401f);border-radius:14px;
+  padding:16px 18px 14px;margin:18px 0 8px;background:rgba(127,127,127,.07)}
+.cp h2{margin:0 0 4px;font-size:1.25rem}
+.cp .cp-sub{margin:0 0 12px;color:var(--color-muted,#8a8378);font-size:.95rem;line-height:1.45}
+.cp-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.cp button{font:inherit;font-weight:600;cursor:pointer;border-radius:999px;
+  border:1px solid var(--color-edge-strong,rgba(130,130,130,.5));
+  background:transparent;color:inherit;padding:9px 16px;min-height:44px}
+.cp button.cp-on{background:var(--color-accent,#c8401f);color:#14100a;border-color:transparent}
+.cp button:disabled{opacity:.45;cursor:not-allowed}
+.cp-stage{position:relative;margin:6px 0 10px}
+.cp-stage .cp-ytwrap{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}
+.cp-stage iframe{width:100%;height:100%;border:0;display:block}
+.cp-audio-panel{border:1px solid var(--color-edge-strong,rgba(130,130,130,.5));
+  border-radius:10px;padding:18px;text-align:center}
+.cp-audio-panel .cp-audio-big{font-family:var(--font-lockup,Cinzel,serif);
+  letter-spacing:.08em;font-size:1.05rem;margin:0 0 10px}
+.cp-audio-panel audio{width:100%;height:44px}
+.cp-overlay{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;
+  align-items:center;justify-content:center;text-align:center;padding:18px;
+  background:rgba(10,10,14,.88);border-radius:10px;color:#f2ead8;z-index:3}
+.cp-overlay p{margin:0;font-size:1.05rem;line-height:1.45;max-width:34ch}
+.cp-overlay .cp-row{justify-content:center;margin:0}
+.cp-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}
+.cp-play{background:var(--color-accent,#c8401f)!important;color:#14100a!important;border-color:transparent!important}
+.cp-sleep{display:flex;gap:8px;align-items:center;font-size:.95rem;cursor:pointer;
+  border:1px solid var(--color-edge-strong,rgba(130,130,130,.5));
+  border-radius:999px;padding:9px 16px;min-height:44px}
+.cp-sleep input{width:20px;height:20px;accent-color:var(--color-accent,#c8401f)}
+.cp-status{margin:10px 0 0;font-size:.9rem;color:var(--color-muted,#8a8378);min-height:1.2em}
+.wl-ver{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;border:1px solid var(--color-edge-strong,rgba(130,130,130,.5));
+  border-radius:999px;padding:2px 8px;margin-bottom:6px}
+.wl-empty{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;
+  background:rgba(127,127,127,.08);color:var(--color-muted,#8a8378);
+  font-size:.95rem;text-align:center;padding:12px}
