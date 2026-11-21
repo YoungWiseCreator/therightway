@@ -1,5 +1,22 @@
-/* chapter.css — The Right Way chapter pages (Read · Watch · Listen).
+/* chapter.css — The Right Way chapter pages (Listen · Read · Watch band).
    Layered on assets/style.css; uses the site's own palette variables. */
+
+/* Chapter colour tokens, defined from the site's own palette (style.css
+   :root) — tester finding P1-4 (2026-11-21): these were referenced but
+   never defined, so verse numbers fell back to an off-palette rust red
+   at 3.85:1. Gold on the deep-blue ground computes ~9:1. */
+:root{
+  --color-accent:var(--gold,#D4AF37);
+  --color-muted:var(--ink-dim,#b9c2cf);
+  --color-edge-strong:var(--line,rgba(212,175,55,.35));
+}
+
+/* Readable container (tester finding P1-1, 2026-11-21): the blog-post
+   treatment — a centred ~760px measure with real side padding, so the
+   verse text never runs edge-to-edge at 1280px or flush at 390px. */
+main>article{max-width:760px;margin:0 auto;padding:28px 20px 10px}
+.kicker{color:var(--gold,#D4AF37);font-family:var(--font-lockup,Cinzel,serif);
+  letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin:0 0 6px}
 
 /* ---------- Listen ---------- */
 .wl-listen{border:2px solid var(--color-accent,#c8401f);border-radius:14px;
@@ -33,6 +50,14 @@
   text-transform:uppercase;border:1px solid var(--color-accent,#c8401f);
   color:var(--color-accent,#c8401f);border-radius:999px;padding:2px 8px;margin-bottom:6px}
 
+/* ---------- Watch band (Cameron 2026-11-21 08:02 EST: page order is
+   Listen, then the full chapter text, then the videos as a BAND under
+   the text — the visitor scrolls down to the band and presses play) --- */
+.wl-band{margin:36px 0 10px;padding:20px 18px 8px;
+  border-top:3px solid var(--color-accent,#c8401f);
+  border-radius:0 0 14px 14px;background:rgba(127,127,127,.07)}
+.wl-band h2{margin-top:0}
+
 /* ---------- Read ---------- */
 .wl-read{margin:26px 0 8px}
 .wl-read h2{margin:0 0 10px}
@@ -44,3 +69,4 @@
 /* ---------- Chapter nav ---------- */
 .wl-nav{display:flex;justify-content:space-between;gap:12px;margin:30px 0 6px;flex-wrap:wrap}
 .wl-nav a{font-weight:600}
+.wl-soon{color:var(--color-muted);font-weight:600}
