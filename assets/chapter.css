@@ -111,3 +111,10 @@ main>article{max-width:760px;margin:0 auto;padding:28px 20px 10px}
 .wl-empty{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;
   background:rgba(127,127,127,.08);color:var(--color-muted,#8a8378);
   font-size:.95rem;text-align:center;padding:12px}
+
+/* STITCH LIGHT FLIP — DEPLOY 2026-11-21: chapter/player accent moves from
+   pale gold #D4AF37 (≈2.2:1 on ivory) to the mockup gold #b45309; active
+   player buttons take white text on that gold. */
+:root{--color-accent:#b45309}
+.cp button.cp-on{background:#b45309;color:#ffffff}
+.cp-play{background:#b45309!important;color:#ffffff!important}

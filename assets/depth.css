@@ -101,3 +101,9 @@ a.donate-btn:active,
     transition:none;
   }
 }
+/* STITCH LIGHT FLIP — DEPLOY 2026-11-21: the peak band goes light with the
+   rest of the page (accent band #f2ecde) instead of near-black. */
+:root{--peak-bg:#f2ecde}
+.peak-act .card h3{color:#131c2e}
+.peak-act .card .glyph{color:#b45309}
+.peak-act .card a{color:#b45309}

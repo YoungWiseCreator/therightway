@@ -320,3 +320,53 @@ h1,h2,h3{font-family:"Newsreader","Cormorant Garamond",Georgia,serif}
 .card h2,.card h3,.post-card h2,.post-card h3{color:#131c2e}
 .donate-btn{background:#b45309;color:#ffffff;border-radius:12px}
 .standfirst{color:#b45309}
+
+/* ============================================================
+   STITCH LIGHT FLIP — DEPLOY 2026-11-21 (completes transplant 3b25ab8)
+   The Stitch mockup ("Sacred Manuscript & Civic Recovery") is a LIGHT
+   design: ivory #fbf9f4 ground, white cards, Deep Slate #131c2e headings
+   (Newsreader), gold #b45309 accents, Plus Jakarta Sans body. The
+   transplant layer restyled headings/cards but never flipped the page
+   ground — the site still rendered the dark CCR night-sky. This block
+   completes the switch. Copy is untouched.
+   ============================================================ */
+:root{
+  --ink:#1c1917; --ink-dim:#57534e; --panel:#ffffff;
+  --line:#e7e3d8; --ep-border:#e7e3d8; --fine-border:#e7e3d8;
+  --fine-text:#78716c; --footer-bg:#f2ecde; --nav-bg:#fbf9f4;
+  --nav-mobile-bg:rgba(251,249,244,.98);
+  --table-th-bg:#131c2e; --tool-field-bg:#ffffff;
+  --plate-bg:#131c2e; --plate-border:#131c2e; --plate-url:#cfc9b8;
+  --font-body:"Plus Jakarta Sans", Inter, system-ui, sans-serif;
+}
+body{background:#fbf9f4; background-image:none; color:#1c1917}
+h1,h2,h3{color:#131c2e}
+a{color:#b45309}
+a:hover{color:#131c2e}
+.lede{color:#57534e}
+.hebrew{color:#b45309}
+.hero .hebrew-big{color:#b45309}
+.float-letters span{color:rgba(180,83,9,.14)}
+.site-nav{background:#fbf9f4; border-bottom:1px solid #e7e3d8}
+.nav-links a{color:#1c1917}
+.nav-links a:hover{background:#f2ecde; color:#131c2e}
+.nav-links a.active{color:#b45309}
+.brand{color:#131c2e}
+.brand-mark{color:#b45309; text-shadow:none}
+.brand-text small{color:#57534e}
+.stat{background:#ffffff; border-color:#e7e3d8}
+.stat b{color:#131c2e}
+.stat span{color:#78716c}
+.card,.post-card{background:#ffffff; color:#1c1917; border-color:#e7e3d8}
+.card h3,.post-card h3{color:#131c2e}
+.book{background:#ffffff}
+.donate-band{background:#f2ecde; color:#131c2e}
+.donate-band h2,.donate-band h3{color:#131c2e}
+table.tiers th{background:#131c2e; color:#ffffff}
+.tool-result{background:#ffffff; border-color:#e7e3d8}
+.tool-field input,.tool-field select,.tool-field textarea{background:#ffffff; color:#1c1917; border-color:#d6d0bf}
+.btn-ghost{border-color:#a8a29e; color:#131c2e}
+.btn-ghost:hover{border-color:#b45309; color:#b45309}
+.site-footer{background:#f2ecde; border-top-color:#e7e3d8}
+.site-footer a{color:#57534e}
+.site-footer a:hover{color:#b45309}
