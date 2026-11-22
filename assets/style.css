@@ -225,7 +225,7 @@ article.post h2{font-weight:700; background:var(--gold-band); border-left:5px so
 .foot-grid{max-width:1120px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:26px}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
 .foot-brand{font-family:var(--font-lockup); color:var(--gold); font-size:1.1rem}
-.foot-meaning{font-family:var(--font-display); font-style:italic; color:var(--silver); font-size:1.02rem}
+.foot-meaning{font-family:var(--font-display); color:var(--silver); font-size:1.02rem}
 .foot-plate{display:inline-flex; align-items:baseline; gap:9px; margin:.1em 0 .7em;
   background:var(--plate-bg); /* flat fill — no gradient, no shadow */
   border:1px solid var(--plate-border); border-left:3px solid var(--gold);
