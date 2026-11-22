@@ -102,8 +102,8 @@ a.donate-btn:active,
   }
 }
 /* STITCH LIGHT FLIP — DEPLOY 2026-11-21: the peak band goes light with the
-   rest of the page (accent band #f2ecde) instead of near-black. */
-:root{--peak-bg:#f2ecde}
-.peak-act .card h3{color:#131c2e}
-.peak-act .card .glyph{color:#b45309}
-.peak-act .card a{color:#b45309}
+   rest of the page (accent band #E3E3F0) instead of near-black. */
+:root{--peak-bg:#E3E3F0}
+.peak-act .card h3{color:#25224F}
+.peak-act .card .glyph{color:#8A6D1F}
+.peak-act .card a{color:#3730A3}

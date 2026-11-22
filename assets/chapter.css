@@ -113,8 +113,8 @@ main>article{max-width:760px;margin:0 auto;padding:28px 20px 10px}
   font-size:.95rem;text-align:center;padding:12px}
 
 /* STITCH LIGHT FLIP — DEPLOY 2026-11-21: chapter/player accent moves from
-   pale gold #D4AF37 (≈2.2:1 on ivory) to the mockup gold #b45309; active
+   pale gold #D4AF37 (≈2.2:1 on ivory) to the mockup gold #8A6D1F; active
    player buttons take white text on that gold. */
-:root{--color-accent:#b45309}
-.cp button.cp-on{background:#b45309;color:#ffffff}
-.cp-play{background:#b45309!important;color:#ffffff!important}
+:root{--color-accent:#3730A3}
+.cp button.cp-on{background:#3730A3;color:#ffffff}
+.cp-play{background:#3730A3!important;color:#ffffff!important}

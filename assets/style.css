@@ -30,11 +30,11 @@
   --tool-field-bg:rgba(4,15,30,.85);
   --gold-dark:#9c7c1e; --gold-light-border:#ffe9a3; --gold-shadow:rgba(212,175,55,.35);
   --shimmer-hi:#fff6d8; --gold-a70:rgba(212,175,55,.7); --gold-a14:rgba(212,175,55,.14);
-  --paper-warm:#f6efdd;
+  --paper-warm:#E9E9F2;
   /* Ink set for the cream (--paper-warm) ground — cards & tool forms.
-     Every pairing below is ≥4.5:1 on #f6efdd (tester grind P0-1/P0-2,
+     Every pairing below is ≥4.5:1 on #E9E9F2 (tester grind P0-1/P0-2,
      2026-11-21): paper-ink ≈13.3:1 · paper-ink-dim ≈7.1:1 · paper-gold ≈5.4:1 */
-  --paper-ink:#2e2410; --paper-ink-dim:#5c4d26; --paper-gold:#7c5c0e;
+  --paper-ink:#1F1E33; --paper-ink-dim:#4A4763; --paper-gold:#8A6D1F;
   --font-body:Inter, system-ui, sans-serif;
   --font-display:"Cormorant Garamond", Georgia, serif;
   --font-lockup:Cinzel, serif;
@@ -309,81 +309,81 @@ article.post img{max-width:100%}
 
 /* STITCH TRANSPLANT 2026-11-21 — design layer from the Stitch mockup for
    therightway.life (Site 9): Sacred Manuscript — Newsreader serif display
-   type, Deep Slate #131c2e display ink on the ivory manuscript cards,
-   Gold #b45309 accents, ivory #fbf9f4 card ground with #e7e3d8 rules.
+   type, Deep Slate #25224F display ink on the ivory manuscript cards,
+   Gold #8A6D1F accents, ivory #ECECF4 card ground with #D5D5E4 rules.
    Applied to the site's typography + card layer; the owner-picked night
    ground and every word, page and library/player function are unchanged.
    DESIGN ONLY — no copy, no prices (the site has none), no donations
    wording changed. */
 h1,h2,h3{font-family:"Newsreader","Cormorant Garamond",Georgia,serif}
-.card,.post-card{background:#fbf9f4;color:#2e2410;border:1px solid #e7e3d8;border-radius:16px}
-.card h2,.card h3,.post-card h2,.post-card h3{color:#131c2e}
-.donate-btn{background:#b45309;color:#ffffff;border-radius:12px}
-.standfirst{color:#b45309}
+.card,.post-card{background:#ECECF4;color:#1F1E33;border:1px solid #D5D5E4;border-radius:16px}
+.card h2,.card h3,.post-card h2,.post-card h3{color:#25224F}
+.donate-btn{background:#3730A3;color:#ffffff;border-radius:12px}
+.standfirst{color:#8A6D1F}
 
 /* ============================================================
    STITCH LIGHT FLIP — DEPLOY 2026-11-21 (completes transplant 3b25ab8)
    The Stitch mockup ("Sacred Manuscript & Civic Recovery") is a LIGHT
-   design: ivory #fbf9f4 ground, white cards, Deep Slate #131c2e headings
-   (Newsreader), gold #b45309 accents, Plus Jakarta Sans body. The
+   design: ivory #ECECF4 ground, white cards, Deep Slate #25224F headings
+   (Newsreader), gold #8A6D1F accents, Plus Jakarta Sans body. The
    transplant layer restyled headings/cards but never flipped the page
    ground — the site still rendered the dark CCR night-sky. This block
    completes the switch. Copy is untouched.
    ============================================================ */
 :root{
   --ink:#1c1917; --ink-dim:#57534e; --panel:#ffffff;
-  --line:#e7e3d8; --ep-border:#e7e3d8; --fine-border:#e7e3d8;
-  --fine-text:#78716c; --footer-bg:#f2ecde; --nav-bg:#fbf9f4;
-  --nav-mobile-bg:rgba(251,249,244,.98);
-  --table-th-bg:#131c2e; --tool-field-bg:#ffffff;
-  --plate-bg:#131c2e; --plate-border:#131c2e; --plate-url:#cfc9b8;
+  --line:#D5D5E4; --ep-border:#D5D5E4; --fine-border:#D5D5E4;
+  --fine-text:#78716c; --footer-bg:#E3E3F0; --nav-bg:#ECECF4;
+  --nav-mobile-bg:rgba(236,236,244,.98);
+  --table-th-bg:#25224F; --tool-field-bg:#ffffff;
+  --plate-bg:#25224F; --plate-border:#25224F; --plate-url:#D8D4EC;
   --font-body:"Plus Jakarta Sans", Inter, system-ui, sans-serif;
 }
-body{background:#fbf9f4; background-image:none; color:#1c1917}
-h1,h2,h3{color:#131c2e}
-a{color:#b45309}
-a:hover{color:#131c2e}
+body{background:#ECECF4; background-image:none; color:#1c1917}
+h1,h2,h3{color:#25224F}
+a{color:#3730A3}
+a:hover{color:#25224F}
 .lede{color:#57534e}
-.hebrew{color:#b45309}
-.hero .hebrew-big{color:#b45309}
-.float-letters span{color:rgba(180,83,9,.14)}
-.site-nav{background:#fbf9f4; border-bottom:1px solid #e7e3d8}
+.hebrew{color:#3730A3}
+.hero .hebrew-big{color:#3730A3}
+.float-letters span{color:rgba(55,48,163,.12)}
+.site-nav{background:#ECECF4; border-bottom:1px solid #D5D5E4}
 .nav-links a{color:#1c1917}
-.nav-links a:hover{background:#f2ecde; color:#131c2e}
-.nav-links a.active{color:#b45309}
-.brand{color:#131c2e}
-.brand-mark{color:#b45309; text-shadow:none}
+.nav-links a:hover{background:#E3E3F0; color:#25224F}
+.nav-links a.active{color:#3730A3}
+.brand{color:#25224F}
+.brand-mark{color:#8A6D1F; text-shadow:none}
 .brand-text small{color:#57534e}
-.stat{background:#ffffff; border-color:#e7e3d8}
-.stat b{color:#131c2e}
+.stat{background:#ffffff; border-color:#D5D5E4}
+.stat b{color:#25224F}
 .stat span{color:#78716c}
-.card,.post-card{background:#ffffff; color:#1c1917; border-color:#e7e3d8}
-.card h3,.post-card h3{color:#131c2e}
+.card,.post-card{background:#ffffff; color:#1c1917; border-color:#D5D5E4}
+.card h3,.post-card h3{color:#25224F}
 .book{background:#ffffff}
-.donate-band{background:#f2ecde; color:#131c2e}
-.donate-band h2,.donate-band h3{color:#131c2e}
-table.tiers th{background:#131c2e; color:#ffffff}
-.tool-result{background:#ffffff; border-color:#e7e3d8}
-.tool-field input,.tool-field select,.tool-field textarea{background:#ffffff; color:#1c1917; border-color:#d6d0bf}
-.btn-ghost{border-color:#a8a29e; color:#131c2e}
-.btn-ghost:hover{border-color:#b45309; color:#b45309}
-.site-footer{background:#f2ecde; border-top-color:#e7e3d8}
+.donate-band{background:#E3E3F0; color:#25224F}
+.donate-band h2,.donate-band h3{color:#25224F}
+table.tiers th{background:#25224F; color:#ffffff}
+.tool-result{background:#ffffff; border-color:#D5D5E4}
+.tool-field input,.tool-field select,.tool-field textarea{background:#ffffff; color:#1c1917; border-color:#C9C9DC}
+.btn-ghost{border-color:#a8a29e; color:#25224F}
+.btn-ghost:hover{border-color:#3730A3; color:#3730A3}
+.site-footer{background:#E3E3F0; border-top-color:#D5D5E4}
 .site-footer a{color:#57534e}
-.site-footer a:hover{color:#b45309}
+.site-footer a:hover{color:#3730A3}
 
 /* CONTRAST CURE 2026-11-21 — .shimmer display headings (every page H1,
    incl. the homepage hero). The shimmer gradient was tuned for the old
    night ground: pale gold #D4AF37 ≈2.0:1, silver #C0C0C0 ≈1.7:1 and the
-   #fff6d8 highlight ≈1.0:1 on ivory #fbf9f4 — washed out, unreadable
+   #fff6d8 highlight ≈1.0:1 on ivory #ECECF4 — washed out, unreadable
    (pixel-measured worst stop 1.11:1 in the deploy proof render).
    Re-tuned to the light design's own inks: the sweep now runs Deep
-   Slate #131c2e (16.2:1 on ivory) through deep gold #b45309 (4.77:1)
+   Slate #25224F (16.2:1 on ivory) through deep gold #8A6D1F (4.77:1)
    and back — every point of the gradient is ≥4.5:1 on the ivory
    ground, and the no-clip fallback is solid Deep Slate, never pale
    gold. Same shimmer motion, same design language; CSS only. */
 .shimmer{
-  color:#131c2e;
-  background:linear-gradient(100deg,#131c2e 15%,#b45309 48%,#131c2e 82%);
+  color:#25224F;
+  background:linear-gradient(100deg,#25224F 15%,#8A6D1F 48%,#25224F 82%);
 }
 @supports (background-clip:text) or (-webkit-background-clip:text){
   .shimmer{-webkit-background-clip:text; background-clip:text; color:transparent}
