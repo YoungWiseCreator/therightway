@@ -43,6 +43,54 @@
   every verse, in full, free. 38 verses.</p>
   <p class="wl-src"><a href="index.html">All 66 books</a> &middot; <a href="isaiah.html">Isaiah &mdash; all chapters</a></p>
 
+  <section class="wl-listen">
+    <h2>Listen to Isaiah 37</h2>
+    <p class="wl-sub">The whole chapter, read word for word in the one voice of The Right Way.</p>
+    <p class="wl-note">This chapter&rsquo;s reading is in production. The moment it is recorded,
+    it plays right here &mdash; and with autoplay on, the chapter player below carries you
+    straight into the next chapter, all night if you let it.</p>
+  </section>
+
+  <section class="cp" id="chapter-player">
+    <h2>Chapter Player</h2>
+    <p class="cp-sub">Choose how to go through Isaiah 37 &mdash; watch it, or hear it read &mdash;
+    and let it carry you into the next chapter. Press play once; with autoplay
+    on, each chapter hands you to the next.</p>
+    <div class="cp-row" role="group" aria-label="Choose how to play">
+      <button type="button" class="cp-mode" data-mode="video">Watch the chapter</button>
+      <button type="button" class="cp-mode" data-mode="audio">Listen only</button>
+    </div>
+    <div class="cp-row cp-versions" role="group" aria-label="Choose a version">
+      <button type="button" class="cp-ver" data-version="kids">For Kids · Cartoon</button>
+      <button type="button" class="cp-ver" data-version="adult">For Adults · Realistic</button>
+      <button type="button" class="cp-ver" data-version="third">Another View</button>
+    </div>
+    <div class="cp-stage">
+      <div class="cp-ytwrap" id="cp-stage-video"><div id="cp-yt"></div></div>
+      <div class="cp-audio-panel" id="cp-stage-audio" hidden>
+        <p class="cp-audio-big">Isaiah 37 &mdash; read word for word</p>
+        <audio id="cp-audio" controls preload="none">Your browser does not support audio playback.</audio>
+      </div>
+      <div class="cp-overlay" id="cp-prompt" hidden>
+        <p>Still there? Three chapters have played &mdash; the story goes on whenever you are ready.</p>
+        <div class="cp-row">
+          <button type="button" id="cp-keepgoing">Keep going</button>
+          <button type="button" id="cp-stop">Stop here</button>
+        </div>
+      </div>
+      <div class="cp-overlay" id="cp-resume" hidden>
+        <p>The next chapter is ready.</p>
+        <div class="cp-row"><button type="button" id="cp-resume-btn">Continue</button></div>
+      </div>
+    </div>
+    <div class="cp-controls">
+      <button type="button" class="cp-play" id="cp-play">Play Isaiah 37</button>
+      <button type="button" id="cp-autoplay" aria-pressed="false">Autoplay: Off</button>
+      <label class="cp-sleep"><input type="checkbox" id="cp-sleep"> Sleep mode &mdash; play on through the night, no check-ins</label>
+    </div>
+    <p class="cp-status" id="cp-status" role="status"></p>
+  </section>
+
   <section class="wl-read">
     <h2>Read Isaiah 37</h2>
     <div class="wl-verses" data-i18n-skip>
@@ -87,8 +135,17 @@
     </div>
     <p class="wl-src">King James Version (public domain) &mdash; the base text The Right Way
     depicts from, cross-checked against the Hebrew Bible and the Dead Sea Scrolls.</p>
-    <p class="wl-src">Chapter audio and the chapter episodes are being built chapter by chapter
-    and will appear on this page as they are finished. The text above is complete.</p>
+  </section>
+
+  <section class="wl-watch wl-band">
+    <h2>Watch Isaiah 37</h2>
+    <p class="wl-sub">Three ways to watch this chapter are in production: a cartoon telling for kids,
+    a realistic telling for adults, and a third viewpoint. Each one appears here the moment it is finished.</p>
+    <div class="wl-grid">
+      <div class="wl-card"><div class="wl-meta"><span class="wl-ver">For Kids · Cartoon</span><p class="wl-title">Isaiah 37 &mdash; Cartoon version</p><p class="wl-by">In production · The Right Way</p></div></div>
+      <div class="wl-card"><div class="wl-meta"><span class="wl-ver">For Adults · Realistic</span><p class="wl-title">Isaiah 37 &mdash; Realistic version</p><p class="wl-by">In production · The Right Way</p></div></div>
+      <div class="wl-card"><div class="wl-meta"><span class="wl-ver">Another View</span><p class="wl-title">Isaiah 37 &mdash; Another point of view</p><p class="wl-by">In production</p></div></div>
+    </div>
   </section>
 
   <nav class="wl-nav">
@@ -135,5 +192,7 @@
 <script src="../assets/site.js"></script>
 <script src="../assets/lang-toggle.js"></script>
 <script src="../assets/depth.js"></script>
+<script type="application/json" id="cp-config">{"library": "kjv", "name": "Isaiah 37", "next": "isaiah-38.html", "nextName": "Isaiah 38"}</script>
+<script src="../assets/chapter-player.js" defer></script>
 </body>
 </html>
