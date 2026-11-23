@@ -77,6 +77,57 @@
   }
   state.version = pickVersion(state.version) || 'kids';
 
+  /* Language-aware audio (fleet language-switch law, Cameron
+   * 2026-11-23): the site language lives in localStorage 'nmt_lang'
+   * (the i18n walker's key, shared fleet-wide and persisted across
+   * pages). English narration is CFG.audio; a translated narration
+   * ships beside it as assets/audio/<slug>-<lang>.mp3 and is named in
+   * CFG.audioI18n. When the visitor's language has no narration file
+   * for this chapter, the player says so plainly — it never quietly
+   * plays the English file as if the audio had switched. */
+  var LANG_KEY = 'nmt_lang';
+  var LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', pt: 'Português', ru: 'Русский', zh: '中文', he: 'עברית' };
+  function curLang() {
+    try { return localStorage.getItem(LANG_KEY) || 'en'; } catch (e) { return 'en'; }
+  }
+  function audioFor(lang) {
+    if (!CFG.audio) return null;
+    if (!lang || lang === 'en') return CFG.audio;
+    return (CFG.audioI18n && CFG.audioI18n[lang]) || null;
+  }
+  var audioLang = curLang();
+  var mirrorEls = [];
+  function applyAudioLang(lang, keepState) {
+    audioLang = lang;
+    var url = audioFor(lang);
+    var wasPlaying = !!(keepState && playing);
+    var t = 0;
+    try { t = els.audio.currentTime || 0; } catch (e) {}
+    if (url) {
+      if (els.audio.getAttribute('src') !== url) {
+        els.audio.src = url;
+        els.audio.load();
+        if (t > 0) {
+          var resume = function () {
+            els.audio.removeEventListener('loadedmetadata', resume);
+            try { els.audio.currentTime = Math.min(t, els.audio.duration || t); } catch (e) {}
+            if (wasPlaying) startAudio();
+          };
+          els.audio.addEventListener('loadedmetadata', resume);
+        } else if (wasPlaying) {
+          startAudio();
+        }
+      }
+      for (var i = 0; i < mirrorEls.length; i++) {
+        if (mirrorEls[i].getAttribute('src') !== url) mirrorEls[i].src = url;
+      }
+    } else {
+      try { els.audio.pause(); els.audio.removeAttribute('src'); els.audio.load(); } catch (e) {}
+      playing = false;
+      setStatus('The reading of ' + CFG.name + ' in ' + (LANG_NAMES[lang] || lang) + ' is not here yet.');
+    }
+  }
+
   var els = {
     modes: root.querySelectorAll('.cp-mode'),
     versions: root.querySelectorAll('.cp-ver'),
@@ -201,7 +252,12 @@
   function startAudio() {
     showStage();
     hideOverlays();
-    if (!CFG.audio) { setStatus('The reading of ' + CFG.name + ' is not here yet.'); return; }
+    if (!audioFor(audioLang)) {
+      setStatus(audioLang && audioLang !== 'en'
+        ? 'The reading of ' + CFG.name + ' in ' + (LANG_NAMES[audioLang] || audioLang) + ' is not here yet.'
+        : 'The reading of ' + CFG.name + ' is not here yet.');
+      return;
+    }
     var p = els.audio.play();
     playing = true;
     setStatus('Listening to ' + CFG.name + ', read word for word.');
@@ -317,6 +373,27 @@
     startPlayback();
   });
   els.audio.addEventListener('ended', onChapterEnd);
+
+  /* Language wiring: collect the plain reader <audio> stamped beside
+   * the player (same chapter file) so it follows the same switch,
+   * apply the visitor's persisted language, and follow every later
+   * language-switch click (the walker persists 'nmt_lang' itself;
+   * the button's data-lang is the authoritative new value). */
+  (function () {
+    var all = document.querySelectorAll('audio');
+    for (var i = 0; i < all.length; i++) {
+      if (all[i] !== els.audio && CFG.audio && all[i].getAttribute('src') === CFG.audio) {
+        mirrorEls.push(all[i]);
+      }
+    }
+  })();
+  applyAudioLang(curLang(), false);
+  document.addEventListener('click', function (e) {
+    var b = e.target && e.target.closest ? e.target.closest('.lang-btn') : null;
+    if (!b) return;
+    var lang = b.getAttribute('data-lang') || 'en';
+    setTimeout(function () { applyAudioLang(lang, true); }, 0);
+  });
 
   paint();
   showStage();
